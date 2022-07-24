@@ -1,0 +1,15 @@
+.container {
+  @include resp-max("s") {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  width: 90%;
+  margin: 0 auto;
+  max-width: $container-width;
+
+  // Exapmle small size
+  &--small {
+    max-width: 900px;
+  }
+}
