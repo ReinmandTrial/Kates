@@ -1,0 +1,265 @@
+// top Swiper slider start
+.main-slider-slide {
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    background-color: #300e0e;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &-block {
+    padding: 250px 0 170px;
+    position: relative;
+    max-width: 680px;
+    margin: auto;
+    z-index: 2;
+    @include center-text;
+
+    .h1-heading,
+    .text {
+      color: white;
+    }
+
+    .text {
+      margin-bottom: 72px;
+
+      @include resp-max("l") {
+        margin-bottom: 64px;
+      }
+    }
+
+    @include resp-max("l") {
+      padding: 200px 15px 100px;
+    }
+  }
+
+  &-image {
+    width: 100%;
+    max-width: 1920px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include resp-max("l") {
+      height: 100%;
+      width: auto;
+    }
+  }
+}
+
+.swiper {
+  > .swiper-pagination.swiper-pagination-bullets {
+    bottom: 24px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    opacity: 1;
+    margin: 0 13px;
+    transition: 0.3s;
+
+    &-active {
+      background-color: transparent;
+      border: 1px solid #ffffff;
+      border-radius: 10px;
+      width: 24px;
+    }
+  }
+}
+
+// top Swiper slider end
+
+// constructor section start
+.home-constructor-section {
+  background-color: $lightgrey-color;
+  position: relative;
+
+  @include resp-max("m") {
+    background-color: white;
+  }
+
+  .home-constructor-block {
+    padding: 130px 0 150px;
+
+    @include last-text;
+
+    @include resp-max("m") {
+      padding: 40px 0;
+    }
+  }
+
+  .home-constructor-pictures {
+    position: absolute;
+    width: 50vw;
+    right: 0;
+
+    @include resp-max("m") {
+      position: static;
+      width: 100vw;
+      margin: 0 -15px;
+    }
+  }
+
+  .home-constructor-image {
+    position: absolute;
+    width: 50%;
+    max-width: 334px;
+    display: inline-block;
+
+    &:nth-of-type(1) {
+      left: 0;
+
+      @include resp-max("m") {
+        display: none;
+      }
+    }
+
+    &:nth-of-type(2) {
+      left: 342px;
+
+      @include resp-max("m") {
+        display: none;
+      }
+    }
+
+    &:nth-of-type(3) {
+      left: 0;
+      top: 287px;
+      max-width: 676px;
+      width: 676px;
+
+      @include resp-max("m") {
+        position: static;
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+// constructor section end
+
+// products section start
+.home-product-section {
+  padding: 40px 0;
+
+  .home-product-button {
+    @include center-text;
+    margin: 30px 0 0;
+  }
+}
+
+// products section end
+
+// articles section start
+.home-article-section {
+  background-color: $lightgrey-color;
+  padding: 40px 0 56px;
+
+  .home-article-button {
+    @include center-text;
+    margin: 30px 0 0;
+
+    @include resp-max("m") {
+      margin: 15px 0 0;
+    }
+  }
+}
+
+// articles section end
+
+// about us section start
+.home-about-section {
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    background: rgba(29, 29, 27, 0.3);
+    backdrop-filter: blur(50px);
+    z-index: 2;
+    width: 50vw;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+
+    @include resp-max("m") {
+      width: 100%;
+      height: 60%;
+      top: auto;
+    }
+  }
+
+  @include resp-max("m") {
+    padding-top: 290px;
+  }
+}
+
+.home-about-block {
+  padding: 126px 0;
+  position: relative;
+  z-index: 3;
+
+  .h2-heading,
+  .text {
+    color: white;
+  }
+
+  @include last-text;
+
+  @include resp-max("m") {
+    padding: 40px 0;
+  }
+}
+
+.home-about-bg {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  max-width: unset;
+
+  @include resp-max("l") {
+    width: auto;
+    height: 100%;
+  }
+}
+
+// about us section end
+
+// features section start
+.home-features-section {
+  padding: 55px 0;
+
+  .home-features-block {
+    gap: 104px;
+    margin-top: 64px;
+
+    @include resp-max("m") {
+      gap: 40px;
+    }
+  }
+
+  .home-features-item {
+    &-icon {
+      height: 68px;
+    }
+  }
+}
+
+// features section end
