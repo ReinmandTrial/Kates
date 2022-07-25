@@ -20,6 +20,9 @@ mix.js("src/js/app.js", "js");
 // Copy html
 mix.copy("views/*.html", "dist");
 
+// Images
+mix.copyDirectory("src/img", "dist/img");
+
 // BrowserSync
 mix.browserSync({
   proxy: false,
