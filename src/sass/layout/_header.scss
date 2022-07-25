@@ -1,0 +1,134 @@
+// header start
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.top-header {
+  position: relative;
+
+  &:before {
+    content: "";
+    background: rgba(29, 29, 27, 0.3);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
+  }
+
+  &-list {
+    list-style: none;
+    position: relative;
+    z-index: 2;
+
+    &-item {
+      margin-top: 4px;
+      padding: 12px 24px 16px;
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      &.active {
+        background-color: $black-color;
+        border-radius: 4px 4px 0px 0px;
+      }
+
+      &-image {
+        margin: 0 17px -5px 0;
+        height: 20px;
+      }
+    }
+
+    // no space for the last item to the right
+    &:last-of-type {
+      .top-header-list-item:last-of-type {
+        padding-right: 0;
+      }
+    }
+  }
+
+  @include resp-max("m") {
+    display: none;
+  }
+}
+
+.main-header {
+  background-color: $black-color;
+  padding: 16px 0;
+
+  .logo-image {
+    max-width: 166px;
+
+    @include resp-max("m") {
+      max-width: 108px;
+    }
+  }
+
+  &-block {
+    &-list {
+      list-style: none;
+      gap: 32px;
+    }
+
+    &-item {
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &-links {
+    @include resp-max("m") {
+      .main-header-block-list {
+        display: none;
+      }
+    }
+  }
+}
+
+.burger-button {
+  display: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background-image: url(/img/icons/burger.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &.close {
+    background-image: url(/img/icons/back.svg);
+    z-index: 2;
+  }
+
+  @include resp-max("m") {
+    display: inline-block;
+  }
+}
+
+.main-header-mobile {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  padding: 50px 0;
+  top: 0;
+  left: 0;
+  background-color: white;
+
+  @include resp-max("m") {
+    &.overlay {
+      display: block;
+    }
+  }
+}
+
+// header end

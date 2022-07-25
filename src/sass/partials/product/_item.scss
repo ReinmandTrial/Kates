@@ -1,0 +1,145 @@
+// product start
+
+.product-block {
+  width: 284px;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  // shadows overlay fix
+  margin-bottom: 10px;
+
+  @include resp-max("l") {
+    margin-bottom: 80px;
+  }
+
+  &-top {
+    position: relative;
+    height: 284px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &-image {
+      position: absolute;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+
+    &-sale {
+      position: absolute;
+      top: 16px;
+      left: 14px;
+      z-index: 1;
+      color: white;
+      font-size: 14px;
+      padding: 6px 16px;
+      background-color: $red-color;
+      border-radius: 20px;
+    }
+
+    &-fav {
+      position: absolute;
+      top: 9px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.07);
+      backdrop-filter: blur(30px);
+      border-radius: 2px;
+      z-index: 1;
+      border: 0;
+      padding: 11px 11px 8px;
+
+      &:before {
+        content: "";
+        background-image: url(/img/icons/favourite.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 21px;
+        height: 19px;
+        display: inline-block;
+      }
+    }
+  }
+
+  &-name {
+    font-weight: 500;
+    font-size: 18px;
+    color: $black-color;
+    margin: 0 0 12px;
+    min-height: 42px;
+  }
+
+  &-desc {
+    &-line {
+      display: block;
+    }
+  }
+
+  &-text {
+    padding: 20px 16px;
+  }
+
+  &-price {
+    margin-top: 16px;
+
+    &-full {
+      font-size: 24px;
+      margin: 0 0 2px;
+      font-weight: 700;
+      color: $black-color;
+    }
+
+    &-tax {
+      font-size: 12px;
+      margin: 0;
+      color: $black-color;
+    }
+
+    &-old {
+      p {
+        color: $grey-color;
+        text-align: right;
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  &-stock {
+    font-size: 14px;
+    position: relative;
+    margin: 16px 0;
+
+    &-in {
+      &:before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        background-color: #308e89;
+        display: inline-block;
+        border-radius: 12px;
+        margin: 0 10px -1px 0;
+      }
+    }
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  &-compare-link {
+    color: $black-color;
+    text-decoration: none;
+    display: block;
+    margin-top: 20px;
+
+    &:before {
+      content: "";
+      width: 18px;
+      height: 18px;
+      background-image: url(/img/icons/arrows-dark.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: inline-block;
+      margin: 0 12px -3px 0;
+    }
+  }
+}
+// product end
