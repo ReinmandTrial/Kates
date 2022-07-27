@@ -8,8 +8,8 @@ const TemplateHome = {
 
   events() {
     // header burger
-    let burgerMenu = document.getElementById("burger");
-    let overlay = document.getElementById("menu");
+    let burgerMenu = document.getElementsByClassName("burger-button")[0];
+    let overlay = document.getElementsByClassName("main-header-mobile")[0];
     burgerMenu.addEventListener("click", function () {
       this.classList.toggle("close");
       overlay.classList.toggle("overlay");
@@ -53,10 +53,68 @@ const TemplateHome = {
       topHeaderMobileLinks.appendChild(topHeaderLinks2);
     }
 
+    // adding class to body on scroll
+    var scrollpos = window.scrollY;
+    var header = document.getElementsByClassName("header")[0];
+    function add_class_on_scroll() {
+      header.classList.add("fixed-header");
+    }
+    function remove_class_on_scroll() {
+      header.classList.remove("fixed-header");
+    }
+    window.addEventListener("scroll", function () {
+      scrollpos = window.scrollY;
+      if (scrollpos > 50) {
+        add_class_on_scroll();
+      } else {
+        remove_class_on_scroll();
+      }
+      console.log(scrollpos);
+    });
+
+    // select in the header
+    const select = document.querySelectorAll(".select-btn");
+    const option = document.querySelectorAll(".select-option");
+    let index = 1;
+    select.forEach((a) => {
+      a.addEventListener("click", (b) => {
+        const next = b.target.nextElementSibling;
+        next.classList.toggle("toggle");
+        next.style.zIndex = index++;
+      });
+    });
+    option.forEach((a) => {
+      a.addEventListener("click", (b) => {
+        b.target.parentElement.classList.remove("toggle");
+        const parent = b.target.closest(".select").children[0];
+        parent.setAttribute("data-type", b.target.getAttribute("data-type"));
+        parent.innerText = b.target.getAttribute("data-type");
+      });
+    });
+
+    // animations on scroll
+    function reveal() {
+      let reveals = document.querySelectorAll(".fadeInUp");
+      for (let i = 0; i < reveals.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = reveals[i].getBoundingClientRect().top;
+        let elementVisible = 50;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("animate__animated", "animate__fadeInUp");
+        }
+      }
+    }
+    window.addEventListener("scroll", reveal);
+
     // homepage top Swiper slider
     const SwiperMainSlider = new Swiper(".main-slider", {
       // Optional parameters
       loop: true,
+      speed: 500,
+      autoplay: {
+        delay: 6000,
+      },
 
       // If we need pagination
       pagination: {
