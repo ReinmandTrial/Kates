@@ -15,7 +15,9 @@ for (let index = 0; index < page_styles.length; index++) {
 }
 
 // JS
-mix.js("src/js/app.js", "js");
+mix.js("src/js/app.js", "js").autoload({
+  jquery: ["$", "window.jQuery"],
+});
 
 // Copy html
 mix.copy("views/*.html", "dist");
