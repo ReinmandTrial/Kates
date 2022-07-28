@@ -8,35 +8,46 @@
 
   @include last-text;
 
-  &-top {
-      position: relative;
-      height: 192px;
-      border-radius: 8px;
-      overflow: hidden;
+  &:hover {
+    .article-block-top-image {
+      transform: scale(1.1);
+    }
 
-      &-image {
-          position: absolute;
-          width: 100%;
-      }
+    .h5-heading {
+      color: $red-color;
+    }
+  }
+
+  &-top {
+    position: relative;
+    height: 192px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &-image {
+      position: absolute;
+      width: 100%;
+      transition: 0.3s;
+    }
   }
 
   &-date {
-      position: absolute;
-      top: 0;
-      left: 18px;
-      background-color: white;
-      border-radius: 0px 0px 8px 8px;
-      padding: 14px 20px;
+    position: absolute;
+    top: 0;
+    left: 18px;
+    background-color: white;
+    border-radius: 0px 0px 8px 8px;
+    padding: 14px 20px;
   }
 
   &-day {
-      display: block;
-      font-size: 24px;
-      font-weight: 700;
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
   }
 
   &-text {
-      padding: 32px 24px 36px;
+    padding: 32px 24px 36px;
   }
 
   @media (max-width: 1366px) {
@@ -44,7 +55,7 @@
   }
 
   @include resp-max("l") {
-      margin-bottom: 24px;
+    margin-bottom: 24px;
   }
 }
 
