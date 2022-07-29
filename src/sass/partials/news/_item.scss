@@ -23,11 +23,18 @@
     height: 192px;
     border-radius: 8px;
     overflow: hidden;
+    display: block;
 
     &-image {
       position: absolute;
       width: 100%;
-      transition: 0.3s;
+      transition: .3s;
+
+
+      @include resp-max("l") {
+        width: auto;
+        height: 100%;
+      }
     }
   }
 
@@ -48,6 +55,13 @@
 
   &-text {
     padding: 32px 24px 36px;
+  }
+
+  .h5-heading {
+    color: $black-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
   }
 
   @media (max-width: 1366px) {
