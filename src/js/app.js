@@ -10,7 +10,6 @@ modules.forEach((module) => {
 
 // import local dependencies
 import Router from "./utils/Router";
-import 'animate.css';
 import templateHome from "./partials/template-home";
 
 // Populate Router instance with DOM routes

@@ -1,0 +1,29 @@
+.catalog-production {
+  &-section {
+    padding: 40px 0;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &-pictures {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @include resp-max("l") {
+      position: static;
+      margin-top: 24px;
+    }
+  }
+
+  &-text {
+    .h3-heading {
+      margin-bottom: 24px;
+    }
+
+    .arrow-link {
+      margin-top: 12px;
+    }
+  }
+}
