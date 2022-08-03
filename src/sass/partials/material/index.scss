@@ -1,0 +1,85 @@
+.material {
+    &-section {
+        margin-bottom: 60px;
+    }
+
+    &-grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(3, 1fr);
+
+        @include resp-max("l") {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include resp-max("m") {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &-item {
+            background-color: white;
+            box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            text-decoration: none;
+            display: flex;
+
+            &-image {
+                position: relative;
+                min-width: 140px;
+                overflow: hidden;
+                border-radius: 8px;
+
+                @include resp-max("m") {
+                    min-width: 128px;
+                }
+
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    @include resp-max("m") {
+                        height: 100%;
+                        width: auto;
+                        max-width: unset;
+                    }
+                }
+            }
+
+            &-text {
+                padding: 24px;
+            }
+        }
+    }
+}
+
+.catalog-production {
+    &-section {
+        padding: 40px 0;
+        background-color: white;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &-pictures {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        @include resp-max("l") {
+            position: static;
+            margin-top: 24px;
+        }
+    }
+
+    &-text {
+        .h3-heading {
+            margin-bottom: 24px;
+        }
+
+        .arrow-link {
+            margin-top: 12px;
+        }
+    }
+}

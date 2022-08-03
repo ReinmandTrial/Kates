@@ -1,6 +1,10 @@
 {
     "/dist/app.js": "/dist/app.js",
     "/styles/template-home.css": "/styles/template-home.css",
+    "/styles/template-catalog.css": "/styles/template-catalog.css",
+    "/styles/template-material.css": "/styles/template-material.css",
+    "/styles/template-material-shop.css": "/styles/template-material-shop.css",
+    "/styles/template-product.css": "/styles/template-product.css",
     "/styles/default.css": "/styles/default.css",
     "/styles/base.css": "/styles/base.css",
     "/dist/index.html": "/dist/index.html"

@@ -4,7 +4,7 @@ require("laravel-mix-clean");
 mix.setPublicPath("dist");
 
 // Page list
-const page_styles = ["base", "default", "template-home"];
+const page_styles = ["base", "default", "template-home", "template-catalog", "template-material", "template-material-shop", "template-product"];
 
 // Add pages to mix
 for (let index = 0; index < page_styles.length; index++) {

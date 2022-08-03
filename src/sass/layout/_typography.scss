@@ -1,0 +1,233 @@
+// typography start
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Jost', sans-serif;
+    color: $black-color;
+    text-transform: uppercase;
+    transition: .3s;
+
+    span {
+        font-family: 'Jost', sans-serif;
+    }
+}
+
+.h1-heading {
+    font-size: 3rem;
+    line-height: 1.16;
+    margin: 0 0 24px;
+}
+
+.h2-heading {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin: 0 0 24px;
+}
+
+.h3-heading {
+    font-size: 2rem;
+    line-height: 1.125;
+    margin: 0 0 32px;
+}
+
+.h4-heading {
+    font-size: 1.5rem;
+    line-height: 1.16;
+    margin: 0 0 8px;
+}
+
+.h5-heading {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin: 0 0 16px;
+}
+
+.h6-heading {
+    font-size: 1rem;
+    line-height: 1.25;
+    margin: 0 0 8px;
+}
+
+.text {
+    line-height: 1.4;
+    color: $black-color;
+
+    // removing extra space to the bottom
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.center-text {
+    text-align: center;
+}
+
+.red {
+    color: $red-color;
+}
+// typography end
+
+// form start
+.form-text-input, .form-textarea {
+    box-shadow: 0px 0px 16px rgb(0 0 0 / 8%);
+    border-radius: 8px;
+    font-size: 16px;
+    border: 0;
+    padding: 15px 16px;
+    outline: none;
+}
+
+.form-textarea {
+    width: 100%;
+}
+
+.form-label {
+    display: flex;
+    flex-direction: column;
+
+    &:last-of-type {
+        margin-bottom: 10px;
+    }
+
+    &-full {
+        width: 100%;
+    }
+
+    &-half {
+        width: 48%;
+    }
+
+    &-name {
+        margin-bottom: 8px;
+        display: inline-block;
+    }
+}
+// form end
+
+// links and buttons start
+.button {
+    padding: 14px 32px;
+    text-decoration: none;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    transition: .3s;
+    display: inline-block;
+    border: 1px solid $red-color;
+    font-size: 16px;
+    cursor: pointer;
+
+    &-red {
+        color: $red-color;
+        border: 1px solid $red-color;
+
+        &:hover {
+            color: $red-color-hover;
+        }
+
+        &-fill {
+            background-color: $red-color;
+            color: white;
+
+            &:hover {
+                background-color: $red-color-hover;
+            }
+        }
+    }
+
+    &-black {
+        color: $black-color;
+        border: 1px solid $black-color;
+
+        &:hover {
+            color: $black-color-hover;
+        }
+
+        &-fill {
+            background-color: $black-color;
+            color: white;
+
+            &:hover {
+                background-color: $black-color-hover;
+            }
+        }
+    }
+
+    &-add-cart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 18px 12px 24px;
+
+        &:after {
+            content: "";
+            background-image: url(../img/icons/cart.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 21px;
+            height: 19px;
+            display: inline-block;
+        }
+    }
+}
+
+.arrow-link {
+    color: $red-color;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+
+    &:after {
+        content: "";
+        background-image: url(../img/icons/red-right-arrow.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 8px;
+        height: 14px;
+        display: inline-block;
+        margin: 0 0 -1px 6px;
+    }
+}
+
+.breadcrumbs {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 28px 0;
+
+    &-item {
+        a {
+            color: $black-color;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        &:last-of-type {
+            a {
+                color: $grey-color;
+            }
+        }
+
+        + .breadcrumbs-item {
+            &:before {
+                content: "";
+                display: inline-block;
+                background-image: url(../img/icons/arrow-breadcrumbs.svg);
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 5px;
+                height: 8px;
+                margin: 0 20px;
+
+                @include resp-max("m") {
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+// links and buttons end

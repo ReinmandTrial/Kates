@@ -1,0 +1,23 @@
+.product-info {
+    &-section {
+        background-color: white;
+        padding: 24px 0 42px;
+    }
+}
+
+.product-form {
+    &-section {
+        background-color: white;
+        padding: 56px 0;
+
+        .h4-heading {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.order-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 16px;
+}
