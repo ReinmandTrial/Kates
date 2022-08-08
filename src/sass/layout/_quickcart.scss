@@ -42,10 +42,8 @@
     &-close {
         width: 42px;
         height: 42px;
-        border: 0;
         background-color: $lightgrey-color;
         border-radius: 6px;
-        cursor: pointer;
 
         &:before {
             content: "";
@@ -79,7 +77,7 @@
     }
 
     &-item {
-        border-bottom: 1px solid #EBEDEE;
+        border-bottom: 1px solid $border-grey-color;
         padding: 15px 15px 15px 0;
         align-items: center;
 
@@ -108,7 +106,6 @@
         }
 
         &-name {
-            color: $black-color;
             font-size: 14px;
             margin: 0 11px 0 0;
             max-width: 145px;
@@ -155,7 +152,6 @@
                 border: 0;
                 text-align: center;
                 font-size: 16px;
-                color: $black-color;
                 outline: none;
             }
         }

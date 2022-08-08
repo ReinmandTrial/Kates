@@ -16,8 +16,22 @@
         background: rgba(29, 29, 27, 0.3);
     }
 
-    .top-header-list-item, .top-header-list-item a {
+    .top-header-list-item,
+    .top-header-list-item a {
         color: white;
+    }
+
+    .top-header-list-item-image {
+        filter: brightness(1);
+    }
+
+    .select .select-btn {
+        color: white;
+
+        &:after {
+            border-right: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+        }
     }
 }
 
@@ -43,10 +57,8 @@
         &-item {
             margin-top: 4px;
             padding: 12px 24px 16px;
-            color: $black-color;
 
             a {
-                color: $black-color;
                 text-decoration: none;
 
                 @include resp-max("m") {
@@ -63,6 +75,7 @@
             &-image {
                 margin: 0 17px -5px 0;
                 height: 20px;
+                filter: brightness(0);
             }
 
             @include resp-max("l") {
@@ -264,114 +277,42 @@
     }
 }
 
-.select {
-    position: relative;
-
-    @include resp-max("m") {
+.header {
+    .select {
         box-shadow: none;
+        padding: 0;
     }
-}
 
-.select .select-btn {
-    box-sizing: border-box;
-    border-radius: 3px;
-    width: 100%;
-    cursor: pointer;
-    position: relative;
-    user-select: none;
-    font-weight: 500;
+    .select .select-btn {
+        font-weight: 500;
+    }
 
-    &:after {
-        content: "";
-        position: absolute;
-        top: 40%;
-        right: -15px;
-        width: 6px;
-        height: 6px;
-        transform: translateY(-50%) rotate(45deg);
-        border-right: 2px solid #fff;
-        border-bottom: 2px solid #fff;
-        transition: .3s;
-
+    .select .select-dropdown {
         @include resp-max("m") {
-            border-right: 2px solid $black-color;
-            border-bottom: 2px solid $black-color;
-            right: 0;
+            width: 100vw;
+            right: -15px;
+            box-shadow: none;
+            border-radius: 0;
+            border: 0;
         }
     }
-}
 
-.select .select-btn.toggle {
-    border-radius: 3px 3px 0 0;
-}
+    [data-type="EN"]+.select-dropdown [data-type="EN"],
+    [data-type="LV"]+.select-dropdown [data-type="LV"] {
+        color: $red-color;
 
-.select .select-btn.toggle:after {
-    -webkit-transform: translateY(-50%) rotate(-135deg);
-    transform: translateY(-50%) rotate(-135deg);
-}
-
-.select .select-dropdown {
-    position: absolute;
-    top: 100%;
-    width: 110px;
-    right: -15px;
-    border-radius: 0 0 3px 3px;
-    overflow: hidden;
-    border-top: 1px solid #eee;
-    z-index: 1;
-    background: #fff;
-    transform: scale(1, 0);
-    transform-origin: top center;
-    visibility: hidden;
-    transition: .3s;
-    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
-    border-radius: 8px;
-
-    @include resp-max("m") {
-        width: 100vw;
-        right: -15px;
-        box-shadow: none;
-        border-radius: 0;
-        border: 0;
-    }
-}
-
-.select .select-dropdown .select-option {
-    padding: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-    color: $black-color;
-    position: relative;
-
-    @include resp-max("m") {
-        padding: 14px 17px 4px;
-    }
-}
-
-.select .select-dropdown .select-option:hover {
-    background: #f8f8f8;
-}
-
-.select .select-dropdown.toggle {
-    visibility: visible;
-    transform: scale(1, 1);
-}
-
-[data-type="EN"]+.select-dropdown [data-type="EN"],
-[data-type="LV"]+.select-dropdown [data-type="LV"] {
-    color: $red-color;
-
-    &:after {
-        content: "";
-        background-image: url(../img/icons/check-red.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 16px;
-        height: 12px;
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
+        &:after {
+            content: "";
+            background-image: url(../img/icons/check-red.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 16px;
+            height: 12px;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
 }
 

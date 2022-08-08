@@ -3,37 +3,41 @@
 
   .product-slider-button-prev,
   .product-slider-button-next {
-      display: none;
+    display: none;
+    top: auto;
+    bottom: 0;
+
+    @include resp-max("l") {
+      display: inline-block;
+    }
+
+    &:after {
+      font-size: 20px;
       color: $black-color;
-      top: auto;
-      bottom: 0;
+    }
+  }
 
-      @include resp-max("l") {
-          display: inline-block;
-      }
-
-      &:after {
-          font-size: 20px;
-      }
+  .product-slider-button-next {
+    text-align: right;
   }
 
   .swiper-pagination .swiper-pagination-bullet {
-      background-color: $black-color;
+    background-color: $black-color;
   }
 
   .swiper-pagination .swiper-pagination-bullet-active {
-      border-color: $black-color;
-      background-color: white;
+    border-color: $black-color;
+    background-color: white;
   }
 
   .product-slider-slide {
-      // shadows overlay fix
-      display: flex;
-      justify-content: center;
+    // shadows overlay fix
+    display: flex;
+    justify-content: center;
 
-      @include resp-max("s") {
-          width: 80%;
-      }
+    @include resp-max("s") {
+      width: 80%;
+    }
   }
 }
 
@@ -42,6 +46,7 @@
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
   border-radius: 8px;
   background-color: white;
+  position: relative;
   // shadows overlay fix
   margin-bottom: 10px;
 
@@ -74,16 +79,23 @@
       transition: 0.3s;
     }
 
-    &-sale {
+    &-badge {
       position: absolute;
       top: 16px;
       left: 14px;
       z-index: 1;
-      color: white;
-      font-size: 14px;
-      padding: 6px 16px;
-      background-color: $red-color;
-      border-radius: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      max-width: 200px;
+
+      &-item {
+        color: white;
+        font-size: 14px;
+        padding: 6px 16px;
+        background-color: $red-color;
+        border-radius: 20px;
+      }
     }
   }
 
@@ -110,7 +122,8 @@
       transition: .3s;
     }
 
-    &:hover, &.active {
+    &:hover,
+    &.active {
       &:before {
         background-image: url(../img/icons/favourite-fill.svg);
       }
@@ -120,7 +133,6 @@
   &-name {
     font-weight: 500;
     font-size: 18px;
-    color: $black-color;
     margin: 0 0 12px;
     min-height: 42px;
     display: block;
@@ -144,13 +156,11 @@
       font-size: 24px;
       margin: 0 0 2px;
       font-weight: 700;
-      color: $black-color;
     }
 
     &-tax {
       font-size: 12px;
       margin: 0;
-      color: $black-color;
     }
 
     &-old {
@@ -185,7 +195,6 @@
   }
 
   &-compare-link {
-    color: $black-color;
     text-decoration: none;
     display: block;
     margin-top: 20px;

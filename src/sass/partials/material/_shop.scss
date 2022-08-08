@@ -17,3 +17,158 @@
     }
   }
 }
+
+.material-desc {
+  &-section {
+    background-color: white;
+
+    .container {
+      border-bottom: 1px solid $border-grey-color;
+      padding: 24px 0 40px;
+
+      @include resp-max("s") {
+        padding: 24px 15px 40px;
+      }
+    }
+
+    .h3-heading,
+    .text {
+      margin-bottom: 24px;
+    }
+
+    .text {
+      font-size: 14px;
+    }
+  }
+}
+
+.material-shop {
+  &-section {
+    background-color: white;
+  }
+}
+
+.filter {
+  margin-right: 40px;
+  padding: 24px 16px 24px 0;
+  border-right: 1px solid $border-grey-color;
+  width: 226px;
+
+  @include resp-max("l") {
+    width: 169px;
+  }
+
+  @include resp-max("m") {
+    width: 100%;
+    margin-right: 0;
+    border: 0;
+  }
+
+  &-sort {
+    margin: 32px 0;
+
+    .h6-heading {
+      margin: 0 0 16px;
+    }
+  }
+}
+
+.shop {
+  padding: 24px 0 0;
+
+  @include resp-max("m") {
+    width: 100%;
+  }
+
+  &-top {
+    margin-bottom: 36px;
+    display: flex;
+
+    &-filter {
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      gap: 16px;
+      align-items: center;
+
+      &-tag {
+        padding: 8px 12px 8px 16px;
+        background-color: $lightgrey-color;
+        border-radius: 150px;
+        font-size: 14px;
+        font-weight: 500;
+
+        &-close {
+          &:before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background-image: url(../img/icons/cart-close.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: inline-block;
+          }
+        }
+
+        &-reset {
+          margin-left: auto;
+          font-size: 16px;
+          background-color: white;
+        }
+      }
+
+      &-sort {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 33px;
+
+    @include resp-max("l") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include resp-max("m") {
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+
+      .product-block {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-pagination {
+    margin: 24px 0 40px;
+    text-align: right;
+
+    @include resp-max("m") {
+      text-align: center;
+    }
+
+    &-number {
+      text-decoration: none;
+      font-size: 18px;
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 8px;
+
+      &.active {
+        background-color: $lightgrey-color;
+      }
+    }
+
+    &-arrow {
+      background-image: url(../img/icons/black-right-arrow.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 8px;
+      height: 14px;
+      display: inline-block;
+    }
+  }
+}

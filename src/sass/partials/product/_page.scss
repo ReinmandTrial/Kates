@@ -1,0 +1,111 @@
+.product {
+    &-info {
+        &-section {
+            background-color: white;
+            padding: 24px 0 42px;
+        }
+    }
+
+    &-chars {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        max-width: 384px;
+
+        @include resp-max("m") {
+            max-width: 100%;
+        }
+
+        &-item {
+            display: flex;
+            margin-bottom: 16px;
+
+            &-name {
+                margin-right: auto;
+            }
+        }
+    }
+
+    &-specs {
+        &-section {
+            margin: 40px 0;
+        }
+
+        &-block {
+            background-color: white;
+            display: flex;
+            border-radius: 8px;
+
+            &-col {
+                width: 50%;
+                padding: 40px;
+
+                @include resp-max("m") {
+                    width: 100%;
+                    padding: 24px;
+                }
+
+                +.product-specs-block-col {
+                    border-left: 1px solid $border-grey-color;
+
+                    @include resp-max("m") {
+                        border-top: 1px solid $border-grey-color;
+                        border-left: 0;
+                    }
+                }
+            }
+
+            @include resp-max("m") {
+                flex-direction: column;
+            }
+        }
+
+        &-dropdown {
+            background-color: white;
+            border-radius: 8px;
+            margin-top: 24px;
+
+            &-name {
+                padding: 22px 31px;
+                margin: 0;
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            .product-chars-item {
+                border-top: 1px solid $border-grey-color;
+                padding: 24px 31px;
+                margin: 0;
+            }
+        }
+    }
+
+    &-form {
+        &-section {
+            background-color: white;
+            padding: 56px 0;
+            position: relative;
+            overflow: hidden;
+
+            .h4-heading {
+                margin-bottom: 40px;
+            }
+
+            .order-form {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 24px 16px;
+            }
+        }
+
+        &-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            @include resp-max("l") {
+                display: none;
+            }
+        }
+    }
+}
