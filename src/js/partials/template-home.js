@@ -9,14 +9,12 @@ const TemplateHome = {
   events() {
     // homepage top Swiper slider
     const SwiperMainSlider = new Swiper(".main-slider", {
-      // Optional parameters
       loop: true,
       speed: 500,
       autoplay: {
         delay: 6000,
       },
 
-      // If we need pagination
       pagination: {
         el: ".main-slider-pagination",
         clickable: true,
@@ -25,7 +23,6 @@ const TemplateHome = {
 
     // products Swiper slider
     const SwiperProductSlider = new Swiper(".product-slider", {
-      // Optional parameters
       slidesPerView: "auto",
       spaceBetween: 8,
       breakpoints: {
@@ -44,13 +41,11 @@ const TemplateHome = {
         },
       },
 
-      // Navigation arrows
       navigation: {
         nextEl: ".product-slider-button-next",
         prevEl: ".product-slider-button-prev",
       },
 
-      // If we need pagination
       pagination: {
         el: ".product-slider-pagination",
         clickable: true,

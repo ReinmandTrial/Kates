@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/template-product.css" />
   </head>
 
-  <body class="template-catalog">
+  <body class="template-product">
     <header class="header">
       <div class="top-header">
         <div class="container">
@@ -120,7 +120,10 @@
                   </div>
                 </div>
                 <p class="product-block-stock product-block-stock-in">Ir noliktavā</p>
+                <div class="product-info-shipping"><img src="img/icons/box-product.svg" alt="" /><b class="product-info-shipping-main">Sūtam ar Omniva</b><span class="small-text">(Atkarībā no daudzuma)</span></div>
                 <button class="button button-red-fill button-add-cart">Ielikt grozā</button>
+                <a href="" class="product-info-link"><img src="img/icons/arrows-dark.svg" class="product-info-link-icon" alt="" /> Pievienot salīdzināšanai</a>
+                <a href="" class="product-info-link"><img src="img/icons/favourite-dark.svg" class="product-info-link-icon" alt="" /> Pievienot velmju sarakstam</a>
               </div>
               <div class="col col-33 col-m-full"></div>
               <div class="col col-33 col-m-full">
@@ -167,8 +170,14 @@
               <div class="product-specs-dropdown">
                 <p class="product-specs-dropdown-name">Instrukcijas</p>
                 <ul class="product-chars">
-                  <li class="product-chars-item"><b class="product-chars-item-name"><a href="">faila_nosaukums.pdf</a></b><span>4,6 Mb</span></li>
-                  <li class="product-chars-item"><b class="product-chars-item-name"><a href="">faila_nosaukums.pdf</a></b><span>4,6 Mb</span></li>
+                  <li class="product-chars-item">
+                    <b class="product-chars-item-name"><a href="">faila_nosaukums.pdf</a></b
+                    ><span>4,6 Mb</span>
+                  </li>
+                  <li class="product-chars-item">
+                    <b class="product-chars-item-name"><a href="">faila_nosaukums.pdf</a></b
+                    ><span>4,6 Mb</span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -176,8 +185,14 @@
               <div class="product-specs-dropdown">
                 <p class="product-specs-dropdown-name">Lejuplādes</p>
                 <ul class="product-chars">
-                  <li class="product-chars-item"><b class="product-chars-item-name"><a href="">faila_nosaukums.pdf</a></b><span>4,6 Mb</span></li>
-                  <li class="product-chars-item"><b class="product-chars-item-name"><a href="">faila_nosaukums.pdf</a></b><span>4,6 Mb</span></li>
+                  <li class="product-chars-item">
+                    <b class="product-chars-item-name"><a href="">faila_nosaukums.pdf</a></b
+                    ><span>4,6 Mb</span>
+                  </li>
+                  <li class="product-chars-item">
+                    <b class="product-chars-item-name"><a href="">faila_nosaukums.pdf</a></b
+                    ><span>4,6 Mb</span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -185,8 +200,14 @@
               <div class="product-specs-dropdown">
                 <p class="product-specs-dropdown-name">Tehniskā infromācija</p>
                 <ul class="product-chars">
-                  <li class="product-chars-item"><b class="product-chars-item-name"><a href="">faila_nosaukums.pdf</a></b><span>4,6 Mb</span></li>
-                  <li class="product-chars-item"><b class="product-chars-item-name"><a href="">faila_nosaukums.pdf</a></b><span>4,6 Mb</span></li>
+                  <li class="product-chars-item">
+                    <b class="product-chars-item-name"><a href="">faila_nosaukums.pdf</a></b
+                    ><span>4,6 Mb</span>
+                  </li>
+                  <li class="product-chars-item">
+                    <b class="product-chars-item-name"><a href="">faila_nosaukums.pdf</a></b
+                    ><span>4,6 Mb</span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -227,7 +248,64 @@
         </div>
       </section>
       <section class="product-gallery-section">
-        <div class="container"></div>
+        <div class="container">
+          <div class="tab-container">
+            <div class="tab-nav">
+              <button data-tab="gallery" class="tab-nav-item active">Galerija</button>
+              <button data-tab="video" class="tab-nav-item">Video</button>
+              <button data-tab="cits" class="tab-nav-item">Cits</button>
+            </div>
+            <div id="gallery" class="tab active">
+              <div class="tab-gallery">
+                <a href="" class="tab-gallery-item"><img src="img/products/product-1.jpg" class="tab-gallery-item-image" alt="" /></a>
+                <a href="" class="tab-gallery-item"><img src="img/products/product-2.jpg" class="tab-gallery-item-image" alt="" /></a>
+                <a href="" class="tab-gallery-item"><img src="img/products/product-3.jpg" class="tab-gallery-item-image" alt="" /></a>
+                <a href="" class="tab-gallery-item"><img src="img/products/product-4.jpg" class="tab-gallery-item-image" alt="" /></a>
+                <a href="" class="tab-gallery-item"><img src="img/products/product-2.jpg" class="tab-gallery-item-image" alt="" /></a>
+                <a href="" class="tab-gallery-item"><img src="img/products/product-3.jpg" class="tab-gallery-item-image" alt="" /></a>
+                <a href="" class="tab-gallery-item"><img src="img/products/product-4.jpg" class="tab-gallery-item-image" alt="" /></a>
+              </div>
+            </div>
+            <div id="video" class="tab">
+              <div class="tab-video">
+                <div class="tab-video-col">
+                  <h3 class="h3-heading">Video nosaukums</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan magna nec nisi eleifend sagittis. Aliquam feugiat pretium tellus vel varius. Donec id imperdiet quam. Vivamus lectus ex, gravida ut mi eu, convallis ullamcorper sem. Etiam posuere congue tortor, a gravida purus placerat nec</p>
+                </div>
+                <div class="tab-video-col">
+                  <div class="swiper product-video-slider">
+                    <div class="swiper-wrapper product-video-slider-wrapper">
+                      <div class="swiper-slide product-video-slider-slide">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                      <div class="swiper-slide product-video-slider-slide">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                      <div class="swiper-slide product-video-slider-slide">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                    <div class="swiper-button-next product-video-slider-button-next"></div>
+                    <div class="swiper-button-prev product-video-slider-button-prev"></div>
+                    <div class="swiper-pagination product-video-slider-pagination"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="cits" class="tab">
+              <h3 class="h3-heading">nosaukums</h3>
+              <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan magna nec nisi eleifend sagittis. Aliquam feugiat pretium tellus vel varius. Donec id imperdiet quam. Vivamus lectus ex, gravida ut mi eu, convallis ullamcorper sem. Etiam posuere congue tortor, a gravida purus placerat nec</p>
+              <h4 class="h4-heading">Lorem ipsum dolor sit amet</h4>
+              <ul class="tab-list">
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Pellentesque accumsan magna nec nisi eleifend sagittis.</li>
+                <li>Aliquam feugiat pretium tellus vel varius. Donec id imperdiet quam.</li>
+                <li>Vivamus lectus ex, gravida ut mi eu, convallis ullamcorper sem.</li>
+                <li>Etiam posuere congue tortor, a gravida purus placerat nec</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="product-similar-section">
         <div class="container"></div>
