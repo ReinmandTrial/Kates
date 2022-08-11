@@ -40,3 +40,4 @@ jobs:
           local-dir: ./dist/
           # Remote directory
           server-dir: katesplates/
+          log-level: verbose
