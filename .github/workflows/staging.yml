@@ -29,15 +29,11 @@ jobs:
           npm run build
 
       - name: Deploying
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        uses: Creepios/sftp-action@v1.0.4
         with:
-          server: 46.101.106.155
-          username: katesplates
-          password: ${{ secrets.password }}
+          host: 46.101.106.155
           port: 22
-          protocol: ftps
-          # Local directory
-          local-dir: ./dist/
-          # Remote directory
-          server-dir: katesplates/
-          log-level: verbose
+          username: 'katesplates'
+          passphrase: ${{ secrets.password }}
+          localPath: './dist/'
+          remotePath: 'katesplates/'
