@@ -4,6 +4,15 @@
     overflow: hidden;
 }
 
+.header {
+    @include resp-max("l") {
+        font-size: 14px;
+    }
+    @include resp-max("m") {
+        font-size: 16px;
+    }
+}
+
 .header-overlay {
     .header {
         position: absolute;

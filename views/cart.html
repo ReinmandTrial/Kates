@@ -27,10 +27,16 @@
             </ul>
             <ul class="top-header-list top-header-list-links flexbox-full h-e">
               <li class="top-header-list-item">
-                <a href=""><img src="img/icons/search.svg" alt="" class="top-header-list-item-image" />Meklēt</a>
+                <a href="">
+                  <img src="img/icons/search.svg" alt="" class="top-header-list-item-image" />
+                  Meklēt
+                </a>
               </li>
               <li class="top-header-list-item">
-                <a href=""><img src="img/icons/login.svg" alt="" class="top-header-list-item-image" />Pieslēgties</a>
+                <a href="">
+                  <img src="img/icons/login.svg" alt="" class="top-header-list-item-image" />
+                  Pieslēgties
+                </a>
               </li>
               <li class="top-header-list-item">
                 <div class="select">
@@ -93,59 +99,150 @@
       <div class="container">
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item"><a href="">Sākums</a></li>
-          <li class="breadcrumbs-item"><a href="">Katalogs</a></li>
+          <li class="breadcrumbs-item"><a href="">Grozs</a></li>
         </ul>
       </div>
-      <section class="catalog-section">
+      <section class="cart-section">
         <div class="container">
-          <h3 class="h3-heading">Katalogs</h3>
-          <div class="catalog-block flexbox">
-            <div class="col col-33 col-m-full">
-              <div class="catalog-item flexbox-full">
-                <img src="img/catalog/catalog-1.jpg" class="catalog-item-image" alt="" />
-                <div class="catalog-item-text">
-                  <h3 class="h3-heading">Materiāli Mēbeļu Ražosānai</h3>
-                  <a href="" class="arrow-link">Skatīt vairāk</a>
-                </div>
-              </div>
-            </div>
-            <div class="col col-33 col-m-full">
-              <div class="catalog-item flexbox-full">
-                <img src="img/catalog/catalog-2.jpg" class="catalog-item-image" alt="" />
-                <div class="catalog-item-text">
-                  <h3 class="h3-heading">Materiāli Celtniecībai</h3>
-                  <a href="" class="arrow-link">Skatīt vairāk</a>
-                </div>
-              </div>
-            </div>
-            <div class="col col-33 col-m-full">
-              <div class="catalog-item flexbox-full">
-                <img src="img/catalog/catalog-3.jpg" class="catalog-item-image" alt="" />
-                <div class="catalog-item-text">
-                  <h3 class="h3-heading">Instrumenti un Palīgmateriāli</h3>
-                  <a href="" class="arrow-link">Skatīt vairāk</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="catalog-production-section">
-        <div class="container">
+          <h3 class="h3-heading">Grozs</h3>
           <div class="flexbox-full">
-            <div class="col col-50 col-l-full">
-              <div class="catalog-production-text">
-                <h3 class="h3-heading">Kates plates produkcijas priekšrocības</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies mauris nec mi auctor, ut dapibus ligula eleifend. Cras at tincidunt felis. Integer vel volutpat nulla. In hac habitasse platea dictumst. Pellentesque tincidunt mi et libero finibus, nec cursus tellus varius. In eleifend lacus eget magna fringilla aliquet.</p>
-                <a href="" class="arrow-link">Lasīt vairāk</a>
+            <div class="cart-list">
+              <div class="cart-item flexbox-full">
+                <p class="cart-item-heading cart-item-heading-main">Nosaukums</p>
+                <p class="cart-item-heading cart-item-heading-price">Cena</p>
+                <p class="cart-item-heading cart-item-heading-amount">Daudzums</p>
+                <p class="cart-item-heading cart-item-heading-final">Summa</p>
+              </div>
+              <div class="cart-item flexbox-full">
+                <div class="cart-item-thumb">
+                  <img src="img/products/product-1.jpg" class="cart-item-thumb-image" alt="" />
+                </div>
+                <div class="cart-item-main">
+                  <p class="cart-item-name">Līmēta priede FIX A/A 3000x1200x33</p>
+                  <p class="cart-item-code">SKU: 02.CA-13.12009</p>
+                  <p class="cart-item-code">Ražotāja kods: RO 013</p>
+                </div>
+                <div class="cart-item-price">
+                  <p class="cart-item-price-full">
+                    <span class="cart-item-final-span">12,00</span>
+                    &nbsp;€
+                  </p>
+                </div>
+                <div class="cart-item-amount">
+                  <button class="cart-item-amount-button cart-item-amount-minus">-</button>
+                  <input type="number" inputmode="numeric" class="cart-item-amount-input" value="1" min="1" max="99" readonly />
+                  <button class="cart-item-amount-button cart-item-amount-plus">+</button>
+                </div>
+                <div class="cart-item-final">
+                  <span class="cart-item-final-span">12,00</span>
+                  &nbsp;€
+                  <p class="cart-item-price-tax">9,48 € + PVN</p>
+                </div>
+                <button class="cart-item-remove-button"></button>
+              </div>
+              <div class="cart-item flexbox-full">
+                <div class="cart-item-thumb">
+                  <img src="img/products/product-2.jpg" class="cart-item-thumb-image" alt="" />
+                </div>
+                <div class="cart-item-main">
+                  <p class="cart-item-name">Līmēta priede FIX A/A 3000x1200x33</p>
+                  <p class="cart-item-code">SKU: 02.CA-13.12009</p>
+                  <p class="cart-item-code">Ražotāja kods: RO 013</p>
+                </div>
+                <div class="cart-item-price">
+                  <p class="cart-item-price-full"><span class="cart-item-final-span">12,00&nbsp;€</span></p>
+                </div>
+                <div class="cart-item-amount">
+                  <button class="cart-item-amount-button cart-item-amount-minus">-</button>
+                  <input type="number" inputmode="numeric" class="cart-item-amount-input" value="1" min="1" max="99" readonly />
+                  <button class="cart-item-amount-button cart-item-amount-plus">+</button>
+                </div>
+                <div class="cart-item-final">
+                  <span class="cart-item-final-span">12,00</span>
+                  &nbsp;€
+                  <p class="cart-item-price-tax">9,48 € + PVN</p>
+                </div>
+                <button class="cart-item-remove-button"></button>
+              </div>
+              <div class="cart-item flexbox-full">
+                <div class="cart-item-thumb">
+                  <img src="img/products/product-3.jpg" class="cart-item-thumb-image" alt="" />
+                </div>
+                <div class="cart-item-main">
+                  <p class="cart-item-name">Līmēta priede FIX A/A 3000x1200x33</p>
+                  <p class="cart-item-code">SKU: 02.CA-13.12009</p>
+                  <p class="cart-item-code">Ražotāja kods: RO 013</p>
+                </div>
+                <div class="cart-item-price">
+                  <p class="cart-item-price-full">
+                    <span class="cart-item-price-full-span">12,00</span>
+                    &nbsp;€
+                  </p>
+                </div>
+                <div class="cart-item-amount">
+                  <button class="cart-item-amount-button cart-item-amount-minus">-</button>
+                  <input type="number" inputmode="numeric" class="cart-item-amount-input" value="1" min="1" max="99" readonly />
+                  <button class="cart-item-amount-button cart-item-amount-plus">+</button>
+                </div>
+                <div class="cart-item-final">
+                  <span class="cart-item-final-span">12,00</span>
+                  &nbsp;€
+                  <p class="cart-item-price-tax">9,48 € + PVN</p>
+                </div>
+                <button class="cart-item-remove-button"></button>
+              </div>
+              <div class="cart-item flexbox-full">
+                <div class="cart-item-thumb">
+                  <img src="img/products/product-4.jpg" class="cart-item-thumb-image" alt="" />
+                </div>
+                <div class="cart-item-main">
+                  <p class="cart-item-name">Līmēta priede FIX A/A 3000x1200x33</p>
+                  <p class="cart-item-code">SKU: 02.CA-13.12009</p>
+                  <p class="cart-item-code">Ražotāja kods: RO 013</p>
+                </div>
+                <div class="cart-item-price">
+                  <p class="cart-item-price-full">
+                    <span class="cart-item-price-full-span">12,00</span>
+                    &nbsp;€
+                  </p>
+                </div>
+                <div class="cart-item-amount">
+                  <button class="cart-item-amount-button cart-item-amount-minus">-</button>
+                  <input type="number" inputmode="numeric" class="cart-item-amount-input" value="1" min="1" max="99" readonly />
+                  <button class="cart-item-amount-button cart-item-amount-plus">+</button>
+                </div>
+                <div class="cart-item-final">
+                  <span class="cart-item-final-span">12,00</span>
+                  &nbsp;€
+                  <p class="cart-item-price-tax">9,48 € + PVN</p>
+                </div>
+                <button class="cart-item-remove-button"></button>
               </div>
             </div>
-            <div class="catalog-production-pictures">
-              <div class="catalog-production-image animate__animated animate__fadeInRight">
-                <img src="img/catalog/catalog-production.jpg" alt="" />
+            <div class="cart-total">
+              <p>Kupona kods</p>
+              <form action="">
+                <input type="text" class="form-text-input" />
+              </form>
+              <button class="button button-black">Apstiprināt</button>
+              <div class="cart-total-price">
+                <div class="cart-total-price-line">
+                  <p>Cena bez PVN</p>
+                  <p>31,60 €</p>
+                </div>
+                <div class="cart-total-price-line">
+                  <p>PVN 21%</p>
+                  <p>8,40 €</p>
+                </div>
+                <div class="cart-total-price-line">
+                  <h5 class="h5-heading">kopā</h5>
+                  <h4 class="h4-heading">435,00 €</h4>
+                </div>
               </div>
+              <a href="" class="button button-red-fill">Pasūtīt</a>
             </div>
           </div>
+          <a href="" class="arrow-link arrow-link-reverse">Turpināt iepirkties</a>
         </div>
       </section>
 
@@ -161,7 +258,10 @@
             </div>
             <p class="cart-popup-item-name">Līmēta priede FIX A/A 3000x1200x33</p>
             <div class="cart-popup-item-price">
-              <p class="cart-popup-item-price-full"><span class="cart-popup-item-final-span">12,00</span> €</p>
+              <p class="cart-popup-item-price-full">
+                <span class="cart-popup-item-final-span">12,00</span>
+                €
+              </p>
               <p class="cart-popup-item-price-tax">9,48 € + PVN</p>
             </div>
             <div class="cart-popup-item-amount">
@@ -169,7 +269,10 @@
               <input type="number" inputmode="numeric" class="cart-popup-item-amount-input" value="1" min="1" max="99" readonly />
               <button class="cart-popup-item-amount-button cart-popup-item-amount-plus">+</button>
             </div>
-            <p class="cart-popup-item-final"><span class="cart-popup-item-final-span">12,00</span> €</p>
+            <p class="cart-popup-item-final">
+              <span class="cart-popup-item-final-span">12,00</span>
+              €
+            </p>
             <button class="cart-popup-item-remove-button"></button>
           </div>
           <div class="cart-popup-item flexbox-full">
@@ -186,7 +289,10 @@
               <input type="number" inputmode="numeric" class="cart-popup-item-amount-input" value="1" min="1" max="99" readonly />
               <button class="cart-popup-item-amount-button cart-popup-item-amount-plus">+</button>
             </div>
-            <p class="cart-popup-item-final"><span class="cart-popup-item-final-span">12,00</span> €</p>
+            <p class="cart-popup-item-final">
+              <span class="cart-popup-item-final-span">12,00</span>
+              €
+            </p>
             <button class="cart-popup-item-remove-button"></button>
           </div>
           <div class="cart-popup-item flexbox-full">
@@ -195,7 +301,10 @@
             </div>
             <p class="cart-popup-item-name">Līmēta priede FIX A/A 3000x1200x33</p>
             <div class="cart-popup-item-price">
-              <p class="cart-popup-item-price-full"><span class="cart-popup-item-price-full-span">12,00</span> €</p>
+              <p class="cart-popup-item-price-full">
+                <span class="cart-popup-item-price-full-span">12,00</span>
+                €
+              </p>
               <p class="cart-popup-item-price-tax">9,48 € + PVN</p>
             </div>
             <div class="cart-popup-item-amount">
@@ -203,7 +312,10 @@
               <input type="number" inputmode="numeric" class="cart-popup-item-amount-input" value="1" min="1" max="99" readonly />
               <button class="cart-popup-item-amount-button cart-popup-item-amount-plus">+</button>
             </div>
-            <p class="cart-popup-item-final"><span class="cart-popup-item-final-span">12,00</span> €</p>
+            <p class="cart-popup-item-final">
+              <span class="cart-popup-item-final-span">12,00</span>
+              €
+            </p>
             <button class="cart-popup-item-remove-button"></button>
           </div>
           <div class="cart-popup-item flexbox-full">
@@ -212,7 +324,10 @@
             </div>
             <p class="cart-popup-item-name">Līmēta priede FIX A/A 3000x1200x33</p>
             <div class="cart-popup-item-price">
-              <p class="cart-popup-item-price-full"><span class="cart-popup-item-price-full-span">12,00</span> €</p>
+              <p class="cart-popup-item-price-full">
+                <span class="cart-popup-item-price-full-span">12,00</span>
+                €
+              </p>
               <p class="cart-popup-item-price-tax">9,48 € + PVN</p>
             </div>
             <div class="cart-popup-item-amount">
@@ -220,7 +335,10 @@
               <input type="number" inputmode="numeric" class="cart-popup-item-amount-input" value="1" min="1" max="99" readonly />
               <button class="cart-popup-item-amount-button cart-popup-item-amount-plus">+</button>
             </div>
-            <p class="cart-popup-item-final"><span class="cart-popup-item-final-span">12,00</span> €</p>
+            <p class="cart-popup-item-final">
+              <span class="cart-popup-item-final-span">12,00</span>
+              €
+            </p>
             <button class="cart-popup-item-remove-button"></button>
           </div>
         </div>
@@ -259,11 +377,27 @@
               <h6 class="h6-heading">Izmaiņas</h6>
             </div>
             <div class="flexbox-full info-message-text">
-              <p>Šodien strādājam <b class="red">08.00–17.00</b></p>
+              <p>
+                Šodien strādājam
+                <b class="red">08.00–17.00</b>
+              </p>
             </div>
             <div class="flexbox-full flexbox-column info-message-text">
-              <p>Pirmssvētku dienās <b>30. aprīlī</b> un <b>3. maijā</b> plkst. <b>8.00 - 20.00</b>;</p>
-              <p>Svētku dienās <b>1. maijā</b> un <b>4. maijā - Slēgts</b></p>
+              <p>
+                Pirmssvētku dienās
+                <b>30. aprīlī</b>
+                un
+                <b>3. maijā</b>
+                plkst.
+                <b>8.00 - 20.00</b>
+                ;
+              </p>
+              <p>
+                Svētku dienās
+                <b>1. maijā</b>
+                un
+                <b>4. maijā - Slēgts</b>
+              </p>
             </div>
             <button class="button button-red-fill info-message-close-button">Aizvērt</button>
           </div>
@@ -321,10 +455,14 @@
             <div class="col col-33 col-m-full">
               <h6 class="h6-heading">REKVIZĪTI</h6>
               <p class="text">
-                Kates Plates, SIA<br />
-                PVN maksātāja Nr: LV 40003355395 Banka: AS “SWEDBANK”, SWIFT kods: HABALV22<br />
-                Bankas konts:<br />
-                LV05HABA0001408051455<br />
+                Kates Plates, SIA
+                <br />
+                PVN maksātāja Nr: LV 40003355395 Banka: AS “SWEDBANK”, SWIFT kods: HABALV22
+                <br />
+                Bankas konts:
+                <br />
+                LV05HABA0001408051455
+                <br />
                 Juridiskā adrese: Uriekstes iela 2c, Rīga, LV-1005, Latvija
               </p>
             </div>

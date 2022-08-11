@@ -12,10 +12,11 @@ modules.forEach((module) => {
 import Router from "./utils/Router";
 import templateHome from "./partials/template-home";
 import templateProduct from "./partials/template-product";
+import templateCheckout from "./partials/template-checkout";
 
 // Populate Router instance with DOM routes
 const routes = new Router({
-  templateHome, templateProduct,
+  templateHome, templateProduct, templateCheckout,
 });
 
 // Load Events

@@ -7,62 +7,6 @@
     &.active {
         display: block;
     }
-
-    * {
-        color: white;
-    }
-
-    &-gallery {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 24px;
-        margin: 50px 0;
-
-        &-item {
-            position: relative;
-            overflow: hidden;
-            width: 258px;
-            height: 168px;border-radius: 8px;
-
-            &-image {
-                position: absolute;
-                width: 100%;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-        }
-    }
-
-    &-video {
-        display: flex;
-        
-        &-col {
-
-        }
-    }
-
-    &-list {
-        margin: 24px 0;
-        list-style: none;
-
-        li {
-            margin: 0 0 12px;
-
-            &:before {
-                content: "";
-                background-color: $red-color;
-                width: 6px;
-                height: 6px;
-                display: inline-block;
-                margin-right: 16px;
-            }
-        }
-    }
-
-    .h4-heading:not(:first-child) {
-        margin-top: 40px;
-    }
 }
 
 .tab-nav {
