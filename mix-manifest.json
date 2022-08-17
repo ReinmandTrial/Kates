@@ -1,6 +1,7 @@
 {
     "/dist/app.js": "/dist/app.js",
     "/styles/template-home.css": "/styles/template-home.css",
+    "/styles/template-about.css": "/styles/template-about.css",
     "/styles/template-catalog.css": "/styles/template-catalog.css",
     "/styles/template-material.css": "/styles/template-material.css",
     "/styles/template-material-shop.css": "/styles/template-material-shop.css",
@@ -8,6 +9,10 @@
     "/styles/template-cart.css": "/styles/template-cart.css",
     "/styles/template-registration.css": "/styles/template-registration.css",
     "/styles/template-checkout.css": "/styles/template-checkout.css",
+    "/styles/template-news.css": "/styles/template-news.css",
+    "/styles/template-news-single.css": "/styles/template-news-single.css",
+    "/styles/template-profile.css": "/styles/template-profile.css",
+    "/styles/template-contact.css": "/styles/template-contact.css",
     "/styles/default.css": "/styles/default.css",
     "/styles/base.css": "/styles/base.css",
     "/dist/index.html": "/dist/index.html"

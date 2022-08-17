@@ -175,6 +175,21 @@ const Common = {
     }
 
     var connectTabs = new Tabs();
+
+    // Modal
+    document.addEventListener('click', function (e) {
+      var scrollbar = document.body.clientWidth - window.innerWidth + 'px';
+      let $target = e.target;
+      if ($target.closest('[data-toggle="modal"]')) {
+        e.preventDefault();
+        $target = $target.closest('[data-toggle="modal"]');
+        document.querySelector($target.dataset.target).classList.add('modal-show');document.body.classList.toggle("no-scroll");
+      } else if ($target.dataset.close === 'modal') {
+        e.preventDefault();
+        $target.closest('.modal').classList.remove('modal-show');
+        document.body.classList.toggle("no-scroll");
+      }
+    });
   },
 };
 

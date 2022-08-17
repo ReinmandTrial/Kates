@@ -1,0 +1,29 @@
+.pagination {
+    margin: 24px 0 40px;
+    text-align: right;
+
+    @include resp-max("m") {
+        text-align: center;
+    }
+
+    &-number {
+        text-decoration: none;
+        font-size: 18px;
+        display: inline-block;
+        padding: 14px 22px;
+        border-radius: 8px;
+
+        &.active {
+            background-color: $lightgrey-color;
+        }
+    }
+
+    &-arrow {
+        background-image: url(../img/icons/black-right-arrow.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 8px;
+        height: 14px;
+        display: inline-block;
+    }
+}

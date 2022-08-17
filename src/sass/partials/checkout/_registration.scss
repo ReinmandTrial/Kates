@@ -1,0 +1,33 @@
+.modal {
+  &-form {
+    width: 340px;
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-full-form {
+    a {
+      color: $red-color;
+      text-decoration: none;
+    }
+
+    .text {
+      font-size: 14px;
+    }
+
+    .button {
+      text-align: center;
+      color: white;
+      margin: 24px 0 0;
+    }
+
+    .form-label {
+      margin: 24px 0 0;
+    }
+
+    .choice-label {
+      margin: 12px 0 8px;
+    }
+  }
+}

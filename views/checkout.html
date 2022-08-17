@@ -124,9 +124,9 @@
             <div class="checkout-step checkout-step-narrow checkout-step-1 active">
               <div class="checkout-register">
                 <div class="checkout-register-col">
-                  <a href="" class="button button-red-fill">Reģistrēties</a>
+                  <a href="" class="button button-red-fill"  data-toggle="modal" data-target="#modal-1">Reģistrēties</a>
                   <p class="small-text">Jums jau ir profils?</p>
-                  <a href="" class="button button-black-fill">Pieslēgties</a>
+                  <a href="" class="button button-black-fill" data-toggle="modal" data-target="#modal-2">Pieslēgties</a>
                 </div>
                 <div class="checkout-register-col">
                   <a href="" class="button button-black next-step">Pirkt bez reģistrācijas</a>
@@ -438,12 +438,87 @@
                   </label>
                   <a href="" class="cvc-link">Kas ir CVC?</a>
                 </div>
-                <a href="" class="button button-red-fill">Pabeigt pasūtījumu</a>
+                <a href="" class="button button-red-fill last-step">Pabeigt pasūtījumu</a>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <div class="modal modal-full" id="modal-1">
+        <div class="modal-content">
+          <span class="close-button" data-close="modal">×</span>
+          <div class="modal-full-image">
+            <img src="img/registration/reg-photo-1.jpg" alt="" />
+          </div>
+          <div class="modal-full-form">
+            <h3 class="h3-heading">Reģistrēties</h3>
+            <form action="" class="modal-form">
+              <label class="form-label form-label-full">
+                <span class="form-label-name">
+                  E-pasts
+                  <span class="red">*</span>
+                </span>
+                <input type="text" class="form-text-input" />
+              </label>
+              <p class="text">Uz Jūsu norādīto e-pasta adresi tiks nosūtīta pagaidu parole</p>
+              <label class="choice-label">
+                <span class="choice-label-name">Piekrītu un apstiprinu nosacījumus</span>
+                <input type="checkbox" class="choice-label-checkbox">
+                <span class="choice-label-checkmark"></span>
+              </label>
+              <input type="submit" class="button button-red-fill" value="Reģistrēties">
+              <p class="text">Man ir konts! <a href="">Pieslēgties</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal modal-full" id="modal-2">
+        <div class="modal-content">
+          <span class="close-button" data-close="modal">×</span>
+          <div class="modal-full-image">
+            <img src="img/registration/reg-photo-2.jpg" alt="" />
+          </div>
+          <div class="modal-full-form">
+            <h3 class="h3-heading">Pieslēgties</h3>
+            <form action="" class="modal-form">
+              <label class="form-label form-label-full">
+                <span class="form-label-name">
+                  E-pasts
+                  <span class="red">*</span>
+                </span>
+                <input type="text" class="form-text-input" />
+              </label>
+              <label class="form-label form-label-full">
+                <span class="form-label-name">
+                  Parole
+                  <span class="red">*</span>
+                </span>
+                <input type="text" class="form-text-input" />
+              </label>
+              <a href="">Aizmirsāt paroli?</a>
+              <input type="submit" class="button button-red-fill" value="Pieslēgties">
+              <p class="text">Jums vēl nav profila? <a href="">Reģistrējies</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal modal-full" id="modal-3">
+        <div class="modal-content">
+          <span class="close-button" data-close="modal">×</span>
+          <div class="modal-full-image">
+            <img src="img/registration/reg-photo-2.jpg" alt="" />
+          </div>
+          <div class="modal-full-form">
+            <h3 class="h3-heading">paldies!</h3>
+            <h5 class="h5-heading">Jūsu Maksājums ir pieņemts</h5>
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            <a href="" class="button button-red-fill">Uz sākumu</a>
+          </div>
+        </div>
+      </div>
 
       <div class="cart-popup flexbox-full flexbox-column">
         <div class="cart-popup-top flexbox-full h-sb">

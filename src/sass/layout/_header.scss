@@ -13,6 +13,10 @@
     }
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 .header-overlay {
     .header {
         position: absolute;
@@ -65,6 +69,7 @@
 
         &-item {
             margin-top: 4px;
+            font-size: 14px;
             padding: 12px 24px 16px;
 
             a {
@@ -82,8 +87,8 @@
             }
 
             &-image {
-                margin: 0 17px -5px 0;
-                height: 20px;
+                margin: 0 16px -3px 0;
+                height: 16px;
                 filter: brightness(0);
             }
 
@@ -102,6 +107,10 @@
                     color: white;
                 }
             }
+        }
+
+        &-links .top-header-list-item {
+            padding: 12px 12px 16px;
         }
 
         // no space for the last item to the right

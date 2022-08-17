@@ -16,7 +16,7 @@ import templateCheckout from "./partials/template-checkout";
 
 // Populate Router instance with DOM routes
 const routes = new Router({
-  templateHome, templateProduct, templateCheckout,
+  templateHome, templateProduct, templateCheckout
 });
 
 // Load Events

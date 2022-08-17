@@ -77,6 +77,10 @@
     .form-text-input {
         width: 480px;
 
+        @include resp-max("l") {
+            width: 410px;
+        }
+
         @include resp-max("m") {
             width: 100%;
             margin-bottom: 24px;
