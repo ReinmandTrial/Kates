@@ -44,15 +44,28 @@ const TemplateProduct = {
     });
 
     // tabbed gallery on top
-    const current = document.querySelector(".product-info-gallery-main-item");
+    const currentImg = document.querySelector(".product-info-gallery-main-item");
     const imgs = document.querySelectorAll(".product-info-gallery-choice-image");
     imgs.forEach((img) => {
       img.addEventListener("click", (e) => {
-        current.src = e.target.src;
+        currentImg.src = e.target.src;
         imgs.forEach((img) => {
-          img.classList.remove("chosen");
+          img.parentElement.classList.remove("chosen");
         });
-        img.classList.add("chosen");
+        img.parentElement.classList.add("chosen");
+      });
+    });
+
+    // product video
+    // document.querySelectorAll(".product-video-play").addEventListener("click", function () {
+    //   document.this.nextSibling("vid").play();
+    //   document.getElementById("press").style.display = "none";
+    // });
+    const videoPlayBtns = document.querySelectorAll(".product-video-play");
+    videoPlayBtns.forEach((videoPlayBtn) => {
+      videoPlayBtn.addEventListener("click", function() {
+        videoPlayBtn.nextElementSibling.play();
+        videoPlayBtn.style.display = "none"
       });
     });
 

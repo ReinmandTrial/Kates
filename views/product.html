@@ -147,8 +147,8 @@
                     <img src="img/products/product-1.jpg" class="product-info-gallery-main-item" />
                   </div>
                   <div class="product-info-gallery-choice">
-                    <div class="product-info-gallery-choice-item">
-                      <img src="img/products/product-1.jpg" class="product-info-gallery-choice-image chosen" alt="" />
+                    <div class="product-info-gallery-choice-item chosen">
+                      <img src="img/products/product-1.jpg" class="product-info-gallery-choice-image" alt="" />
                     </div>
                     <div class="product-info-gallery-choice-item">
                       <img src="img/products/product-2.jpg" class="product-info-gallery-choice-image" alt="" />
@@ -378,7 +378,10 @@
                   <div class="swiper product-video-slider">
                     <div class="swiper-wrapper product-video-slider-wrapper">
                       <div class="swiper-slide product-video-slider-slide">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <button class="product-video-play"><img src="img/icons/play-button.svg" alt=""></button>
+                        <video class="product-video" controls>
+                          <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+                        </video>
                       </div>
                       <div class="swiper-slide product-video-slider-slide">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -552,7 +555,7 @@
           </div>
         </div>
       </section>
-      <div class="cart-popup flexbox-full flexbox-column">
+      <div class="cart-popup">
         <div class="cart-popup-top flexbox-full h-sb">
           <h4 class="h4-heading">Grozs</h4>
           <button class="cart-popup-close"></button>
