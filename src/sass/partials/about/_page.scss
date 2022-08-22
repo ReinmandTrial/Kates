@@ -47,7 +47,7 @@
       font-family: "Jost", sans-serif;
 
       @include resp-max("m") {
-          margin-top: 8px;
+        margin-top: 8px;
       }
     }
 
@@ -56,5 +56,128 @@
       font-weight: 500;
       margin: 0;
     }
+  }
+}
+
+.about-photo {
+  &-slider {
+    margin: 40px 0 24px;
+
+    &-nav {
+      position: relative;
+      margin-bottom: 40px;
+    }
+
+    &-pagination {
+      bottom: 17px;
+    }
+
+    &-buttons {
+      display: flex;
+      gap: 90px;
+      justify-content: center;
+    }
+
+    &-button {
+      &-next,
+      &-prev {
+        background-color: $lightgrey-color;
+        border-radius: 2px;
+        width: 56px;
+        height: 56px;
+        position: static;
+        z-index: 1;
+        margin: 0;
+
+        &:after {
+          color: $black-color;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+.about-timeline {
+  &-section {
+    background-color: white;
+    padding: 40px 0 60px;
+
+    .text:last-of-type {
+      margin-bottom: 40px;
+    }
+  }
+
+  &-slider {
+    margin: -70px 0 0;
+
+    &-pagination {
+      position: static;
+      width: 100%;
+      transform: none;
+      display: flex;
+      justify-content: space-between;
+      margin: 40px 0 0;
+
+      .swiper-pagination-bullet {
+        font-weight: 700;
+        display: inline-block;
+        color: $black-color;
+        opacity: 1;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        font-size: 16px;
+
+        &-active {
+          ~.swiper-pagination-bullet {
+            color: $grey-color;
+          }
+        }
+      }
+    }
+
+    &-slide {
+        padding-right: 15px;
+        border-right: 1px solid $border-grey-color;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    &-button {
+      &-next,
+      &-prev {
+        background-color: #F5F6F6;
+        border-radius: 2px;
+        width: 56px;
+        height: 56px;
+        position: static;
+        z-index: 1;
+        margin: 0;
+
+        &:after {
+          color: #0A0A0A;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  &-year {
+    font-family: "Jost", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &-image {
+    border-radius: 8px;
+    margin-top: auto; 
   }
 }

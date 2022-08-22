@@ -1,0 +1,140 @@
+.contact {
+    &-main {
+        &-section {
+            padding: 24px 0 40px;
+            background-color: white;
+            position: relative;
+        }
+
+        &-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin: 10px 0 0;
+
+            @include resp-max("m") {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        &-item {
+            display: flex;
+            align-items: flex-start;
+
+            &-image {
+                width: 24px;
+                margin-right: 12px;
+            }
+
+            .text {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &-team {
+        &-section {
+            padding: 40px 0;
+
+            &:nth-of-type(odd) {
+                background-color: white;
+            }
+        }
+
+        &-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin: 40px 0 0;
+
+            @include resp-max("l") {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @include resp-max("m") {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include resp-max("s") {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        &-item {
+            &-image {
+                height: 140px;
+                border-radius: 8px;
+                margin-bottom: 24px;
+            }
+
+            &-info {
+                display: flex;
+                flex-direction: column;
+                margin: 20px 0 0;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    margin: 5px 0;
+
+                    img {
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            .text {
+                margin: 0;
+            }
+        }
+    }
+
+    &-form {
+        &-section {
+            padding: 56px 0;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 2px solid $border-grey-color;
+
+            .h4-heading {
+                margin-bottom: 40px;
+            }
+
+            .order-form {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 24px 16px;
+            }
+        }
+
+        &-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            @include resp-max("l") {
+                display: none;
+            }
+        }
+    }
+}
+
+.google-map {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35vw;
+
+    @include resp-max("l") {
+        width: 25vw;
+    }
+
+    @include resp-max("m") {
+        width: 100%;
+        position: static;
+        height: 250px;
+        margin: 40px 0 0;
+    }
+}

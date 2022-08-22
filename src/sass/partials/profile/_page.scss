@@ -1,287 +1,83 @@
-.checkout {
-  &-register {
-    display: flex;
-
-    @include resp-max("m") {
-      flex-direction: column;
-    }
-
-    &-col {
-      padding: 42px 60px 42px 0;
-
-      @include resp-max("m") {
-        padding: 42px 0 0;
-      }
-
-      +.checkout-register-col {
-        padding: 42px 0 42px 60px;
-        border-left: 1px solid $grey-color;
-
-        @include resp-max("m") {
-          padding: 42px 0;
-          border: 0;
-        }
-      }
-
-      .button {
-        width: 284px;
-        text-align: center;
-
-        @include resp-max("m") {
-          width: 100%;
-          text-align: center;
-        }
-      }
-    }
-
-    .small-text {
-      color: $black-color;
-      margin-top: 30px;
-    }
-  }
-
-  &-line {
-    margin: 0 auto 56px;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    position: relative;
-    max-width: 480px;
-
-    &-progress {
-      width: 600px;
-      background-color: $lightgrey-color;
-      height: 5px;
-      position: absolute;
-      top: 21px;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 5px;
-    }
-
-    &-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-
-      &-circle {
-        color: $grey-color;
-        border: 1px solid $border-grey-color;
-        width: 40px;
-        height: 40px;
-        border-radius: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 500;
-        position: relative;
-        background-color: white;
-        z-index: 2;
-      }
-
-      &-name {
-        color: $grey-color;
-        font-size: 14px;
-        margin: 8px 0 0;
-      }
-
-      &.active {
-        .checkout-line-item-circle {
-          border: 2px solid $red-color;
-          color: $red-color;
-        }
-
-        .checkout-line-item-name {
-          color: $red-color;
-          font-weight: 500;
-        }
-      }
-
-      &.done {
-        .checkout-line-item-circle {
-          background-color: $red-color;
-          border: 2px solid $red-color;
-          color: white;
-        }
-
-        .checkout-line-item-name {
-          color: $black-color;
-        }
-      }
-
-      &.active,
-      &.done {
-        &:after {
-          content: "";
-          background-color: $red-color;
-          height: 5px;
-          display: inline-block;
-          width: 140%;
-          position: absolute;
-          right: 50%;
-          top: 18px;
-          border-radius: 5px;
-          z-index: 1;
-        }
-      }
-    }
-  }
-
+.profile {
   &-section {
     background-color: white;
-    padding: 24px 0 56px;
   }
-
-  &-step {
-    display: none;
-
-    &.active {
-      display: block;
-    }
-
-    &-narrow {
-      max-width: 700px;
-      margin: auto;
-    }
-  }
-}
-
-.checkout-step-3 {
-  .order-form-delivery {
-    .choice-label-checkmark {
-      width: 284px;
-    }
-  }
-}
-
-.tab {
-  background-color: white;
-  padding: 40px 0;
 
   &-container {
-    margin-top: 40px;
-  }
-
-  &-nav-item {
-    width: 50%;
-    background-color: $lightgrey-color;
-    border-color: transparent;
-  }
-}
-
-.order-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px 16px;
-
-  &-line {
-    width: 100%;
-
-    &-address {
-      display: flex;
-      align-items: center;
-      margin-bottom: 32px;
-
-      .select,
-      ~.button {
-        min-width: 300px;
-      }
-
-      @include resp-max("m") {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  }
-
-  &-delivery {
     display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    margin: 24px 0;
 
     @include resp-max("m") {
-      flex-direction: column;
-    }
-
-    .choice-label-checkmark {
-      background-color: white;
-      box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
-      border-radius: 8px;
-      width: 224px;
-      height: 84px;
-      justify-content: flex-start;
-      padding: 20px 24px 24px;
-    }
-
-    .choice-label-name {
-      align-items: flex-start;
-      font-size: 14px;
-      font-weight: 400;
-
-      &-main {
-        font-size: 16px;
-        margin: 4px 0;
-      }
-
-      &-row {
-        flex-direction: row;
-        align-items: center;
-        gap: 14px;
-      }
+        flex-direction: column;
     }
   }
 
-  &-map-link {
-    color: $red-color;
-    font-weight: 500;
-    text-decoration: none;
-    margin-left: 20px;
+  &-tabs {
+    min-width: 279px;
+    border-right: 1px solid $border-grey-color;
+    margin-right: 48px;
+    padding: 24px 0;
 
     @include resp-max("m") {
-      margin: 20px 0 0;
+        margin-right: 0;
+        border-right: 0;
     }
 
-    &:before {
-      content: "";
-      background-image: url(../img/icons/map.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      display: inline-block;
-      width: 18px;
-      height: 21px;
-      margin-right: 4px;
-      vertical-align: middle;
-    }
-  }
-
-  &-payment {
+    &-links {
       display: flex;
-      margin: 40px 0;
+      flex-direction: column;
 
-      .form-label {
-        + .form-label {
-          margin-left: 40px;
-          max-width: 90px;
+      a {
+        text-decoration: none;
+        padding: 16px 0 16px 32px;
+
+        &.active {
+          background-color: $lightgrey-color;
+          border-radius: 8px;
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+          color: $red-color;
+          position: relative;
+          overflow: hidden;
+          &:after {
+            content: "";
+            width: 4px;
+            height: 100%;
+            background-color: $red-color;
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
         }
       }
-
-      .cvc-link {
-        color: $red-color;
-        text-decoration: none;
-        font-weight: 500;
-        margin: auto 0 26px 16px;
-      }
+    }
   }
-}
 
-.cart {
-  &-item {
-    &-amount {
-      box-shadow: none;
+  &-content {
+    padding: 32px 0 16px;
+    flex-grow: 1;
+    @include resp-max("m") {
+      padding-top: 0;
+    }
+    &-line {
+      margin: 56px 0;
+      &-heading {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .h5-heading {
+          margin-bottom: 0;
+        }
+      }
+      &-name {
+        font-weight: 500;
+      }
+    }
+    a {
+      color: $red-color;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .table {
+      margin-top: 8px;
     }
   }
 }

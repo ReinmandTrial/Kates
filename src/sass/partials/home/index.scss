@@ -99,6 +99,14 @@
 
     @include last-text;
 
+    @media (max-width: 1300px) {
+      padding: 130px 0;
+    }
+
+    @media (max-width: 1280px) {
+      padding: 130px 0 100px;
+    }
+
     @include resp-max("l") {
       padding: 40px 0;
     }
@@ -108,6 +116,7 @@
     position: absolute;
     width: 52vw;
     right: 0;
+    margin: 8px 0 0;
 
     @include resp-max("l") {
       position: static;

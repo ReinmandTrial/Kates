@@ -4,7 +4,7 @@ require("laravel-mix-clean");
 mix.setPublicPath("dist");
 
 // Page list
-const page_styles = ["base", "default", "template-home", "template-about", "template-catalog", "template-material", "template-material-shop", "template-product", "template-cart", "template-registration", "template-checkout", "template-news", "template-news-single", "template-profile", "template-contact"];
+const page_styles = ["base", "default", "template-home", "template-about", "template-catalog", "template-material", "template-material-shop", "template-product", "template-cart", "template-registration", "template-checkout", "template-news", "template-news-single", "template-profile", "template-contact", "template-price"];
 
 // Add pages to mix
 for (let index = 0; index < page_styles.length; index++) {

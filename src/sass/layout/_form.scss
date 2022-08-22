@@ -38,6 +38,56 @@
     }
 }
 
+// upload file start
+.input-file-container {
+    position: relative;
+    display: flex;
+}
+
+.js .input-file {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 225px;
+    opacity: 0;
+    padding: 14px 0;
+    cursor: pointer;
+
+    &-trigger {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 46px;
+        border: 1px dashed $border-grey-color;
+        border-radius: 5px;
+        transition: .3s;
+        cursor: pointer;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.file-return {
+    margin: 0;
+}
+
+.file-return:not(:empty) {
+    margin: 1em 0;
+}
+
+.js .file-return {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.js .file-return:not(:empty):before {
+    content: "File: ";
+    font-style: normal;
+    font-weight: normal;
+}
+// upload file end
+
 /* custom checkboxes */
 .choice-label {
     display: flex;

@@ -137,6 +137,7 @@
                     margin: 0;
                     font-size: 18px;
                     font-weight: 700;
+                    transition: .3s;
                 }
 
                 &-arrow {
@@ -149,6 +150,10 @@
                 }
 
                 &.active {
+                    .product-specs-dropdown-top-name {
+                        color: $red-color;
+                    }
+
                     .product-specs-dropdown-top-arrow {
                         background-image: url(../img/icons/arrow-red-up.svg);
                         transform: rotate(360deg);
@@ -341,6 +346,7 @@
                 height: 6px;
                 display: inline-block;
                 margin-right: 16px;
+                border-radius: 10px;
             }
         }
     }

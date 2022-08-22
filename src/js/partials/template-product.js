@@ -34,9 +34,6 @@ const TemplateProduct = {
         },
         1200: {
           slidesPerView: 3,
-          allowTouchMove: false,
-          preventClicksPropagation: false,
-          preventClicks: false,
         },
       },
 

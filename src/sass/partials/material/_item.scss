@@ -20,12 +20,12 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 110%;
+      height: 110%;
+      max-width: unset;
+      width: auto;
 
       @include resp-max("m") {
         height: 120%;
-        width: auto;
-        max-width: unset;
       }
     }
   }

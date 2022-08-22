@@ -10,7 +10,7 @@
 
   &:hover {
     .article-block-top-image {
-      transform: scale(1.1);
+      transform: scale(1.1) translate(-50%, -50%);
     }
 
     .h5-heading {
@@ -32,6 +32,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      transform-origin: top left;
 
       @include resp-max("l") {
         width: auto;

@@ -177,19 +177,42 @@ const Common = {
     var connectTabs = new Tabs();
 
     // Modal
-    document.addEventListener('click', function (e) {
-      var scrollbar = document.body.clientWidth - window.innerWidth + 'px';
+    document.addEventListener("click", function (e) {
+      var scrollbar = document.body.clientWidth - window.innerWidth + "px";
       let $target = e.target;
       if ($target.closest('[data-toggle="modal"]')) {
         e.preventDefault();
         $target = $target.closest('[data-toggle="modal"]');
-        document.querySelector($target.dataset.target).classList.add('modal-show');document.body.classList.toggle("no-scroll");
-      } else if ($target.dataset.close === 'modal') {
+        document.querySelector($target.dataset.target).classList.add("modal-show");
+        document.body.classList.toggle("no-scroll");
+      } else if ($target.dataset.close === "modal") {
         e.preventDefault();
-        $target.closest('.modal').classList.remove('modal-show');
+        $target.closest(".modal").classList.remove("modal-show");
         document.body.classList.toggle("no-scroll");
       }
     });
+
+    // upload file
+    const checkUpload = document.querySelector(".input-file");
+    if (checkUpload) {
+      document.querySelector("html").classList.add("js");
+      var fileInput = document.querySelector(".input-file"),
+        button = document.querySelector(".input-file-trigger"),
+        the_return = document.querySelector(".file-return");
+
+      button.addEventListener("keydown", function (event) {
+        if (event.keyCode == 13 || event.keyCode == 32) {
+          fileInput.focus();
+        }
+      });
+      button.addEventListener("click", function (event) {
+        fileInput.focus();
+        return false;
+      });
+      fileInput.addEventListener("change", function (event) {
+        the_return.innerHTML = this.value;
+      });
+    }
   },
 };
 

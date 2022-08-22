@@ -1,11 +1,51 @@
 .article {
     &-section {
         background-color: white;
-        padding: 24px 0;
+        padding: 40px 0 24px;
 
         .container {
             max-width: 800px;
             margin: auto;
+        }
+    }
+
+    &-more {
+        &-section {
+            padding: 40px 0;
+            border-bottom: 2px solid $border-grey-color;
+        }
+
+        &-slider {
+            &-buttons {
+                display: flex;
+                gap: 8px;
+                justify-content: flex-end;
+                position: static;
+                margin: -80px 0 24px;
+            }
+
+            &-button {
+                &-next,
+                &-prev {
+                    background-color: $lightgrey-color;
+                    border-radius: 2px;
+                    width: 56px;
+                    height: 56px;
+                    position: static;
+                    z-index: 1;
+                    margin: 0;
+
+                    &:after {
+                        color: $black-color;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        &-button {
+            text-align: center;
+            margin: 30px 0 0;
         }
     }
 
