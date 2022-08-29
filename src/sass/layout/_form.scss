@@ -86,6 +86,7 @@
     font-style: normal;
     font-weight: normal;
 }
+
 // upload file end
 
 /* custom checkboxes */
@@ -135,32 +136,6 @@
         }
     }
 
-    &-radio {
-        +.choice-label-checkmark {
-            &:before {
-                content: "";
-                background-image: url(../img/icons/radio.svg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                width: 20px;
-                height: 20px;
-                position: absolute;
-                right: 24px;
-                top: 50%;
-                transform: translate(0, -50%);
-                display: inline-block;
-            }
-        }
-
-        &:checked {
-            +.choice-label-checkmark {
-                &:before {
-                    background-image: url(../img/icons/radio-checked.svg);
-                }
-            }
-        }
-    }
-
     input:checked~.choice-label-checkmark {
         background-color: $red-color;
         border-color: $red-color;
@@ -168,6 +143,32 @@
 
     input:checked~.choice-label-checkmark:after {
         display: block;
+    }
+
+    &-radio {
+        +.choice-label-checkmark {
+            background-image: url(../img/icons/radio.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 24px;
+            top: 50%;
+            transform: translate(0, -50%);
+            display: inline-block;
+            border: 0;
+        }
+    }
+
+    input.choice-label-radio:checked~.choice-label-checkmark {
+        background-image: url(../img/icons/radio-checked.svg);
+        background-color: transparent;
+        border-color: transparent;
+
+        &:after {
+            display: none;
+        }
     }
 
     &-square {
@@ -178,7 +179,7 @@
         .choice-label-checkmark {
             background-color: $lightgrey-color;
             border: 1px solid $lightgrey-color;
-            position: static;
+            position: relative;
             width: 48px;
             height: 48px;
             display: flex;
@@ -209,6 +210,33 @@
 
         input:checked~.choice-label-checkmark span {
             color: $red-color;
+        }
+
+        input.choice-label-radio+.choice-label-checkmark {
+            background-image: none;
+            transform: none;
+
+            &:before {
+                content: "";
+                background-image: url(../img/icons/radio.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                right: 24px;
+                top: 50%;
+                transform: translate(0, -50%);
+                display: inline-block;
+                border: 0;
+            }
+        }
+
+        input.choice-label-radio:checked+.choice-label-checkmark {
+            background-image: none;
+            &:before {
+                background-image: url(../img/icons/radio-checked.svg);
+            }
         }
     }
 }
