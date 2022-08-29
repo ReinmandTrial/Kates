@@ -5,7 +5,6 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Jost', sans-serif;
     color: $black-color;
     text-transform: uppercase;
     transition: .3s;
@@ -13,6 +12,15 @@ h6 {
     span {
         font-family: 'Jost', sans-serif;
     }
+}
+
+.h1-heading,
+.h2-heading,
+.h3-heading,
+.h4-heading,
+.h5-heading,
+.h6-heading {
+    font-family: 'Jost', sans-serif;
 }
 
 .h1-heading {
@@ -95,6 +103,16 @@ button {
     cursor: pointer;
     letter-spacing: 0.06em;
 
+    &-wide {
+        padding-left: 140px;
+        padding-right: 140px;
+
+        @include resp-max("m") {
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+    }
+
     &-red {
         color: $red-color;
         border: 1px solid $red-color;
@@ -118,7 +136,8 @@ button {
         border: 1px solid $black-color;
 
         &:hover {
-            color: $black-color-hover;
+            color: $red-color;
+            border: 1px solid $red-color;
         }
 
         &-fill {
@@ -194,6 +213,7 @@ button {
 
     &-item {
         @include resp-max("m") {
+
             // showing first and last breadcrumb on mobile
             &:not(:first-of-type),
             &:not(:last-of-type) {

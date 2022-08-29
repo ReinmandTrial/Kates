@@ -28,6 +28,7 @@
 
     .top-header:before {
         background: rgba(29, 29, 27, 0.3);
+        backdrop-filter: blur(80px);
     }
 
     .top-header-list-item,
@@ -55,7 +56,6 @@
     &:before {
         content: "";
         background: white;
-        backdrop-filter: blur(10px);
         position: absolute;
         width: 100%;
         height: 100%;
@@ -91,6 +91,37 @@
                 margin: 0 16px -3px 0;
                 height: 16px;
                 filter: brightness(0);
+
+                &-search {
+                    filter: unset;
+                    background-image: url(../img/icons/search-black.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 16px;
+                    height: 16px;
+                    margin-right: 6px;
+                    display: inline-block;
+                }
+            }
+
+            &-search {
+                position: relative;
+                cursor: pointer;
+
+                &.open {
+                    >span {
+                        color: $red-color;
+                    }
+
+                    .search {
+                        display: block;
+                    }
+
+                    .top-header-list-item-image-search {
+                        background-image: url(../img/icons/search-red.svg);
+                    }
+                }
             }
 
             @include resp-max("l") {
@@ -167,6 +198,10 @@
             position: relative;
 
             &.active {
+                a {
+                    color: white;
+                }
+
                 &:after {
                     content: "";
                     position: absolute;
@@ -174,7 +209,7 @@
                     height: 4px;
                     background-color: white;
                     border-radius: 20px 20px 0px 0px;
-                    bottom: -32px;
+                    bottom: -33px;
                     left: 0;
                     right: 0;
 
@@ -256,11 +291,17 @@
 
         .top-header-list-item-image {
             @include resp-max("m") {
-                filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
                 float: right;
                 margin-right: 0;
             }
         }
+    }
+}
+
+// make unactive items grey
+.has-active-item {
+    a {
+        color: $grey-color;
     }
 }
 
@@ -312,6 +353,7 @@
     top: 0;
     left: 0;
     background-color: white;
+    z-index: 9;
 
     @include resp-max("m") {
         &.overlay {
@@ -355,6 +397,78 @@
             right: 10px;
             top: 50%;
             transform: translateY(-50%);
+        }
+    }
+
+    // search in header
+    .search {
+        position: absolute;
+        display: none;
+        width: 480px;
+        max-height: 320px;
+        left: 50%;
+        transform: translate(-50%, 20px);
+        background-color: white;
+        padding: 24px;
+        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+
+        @include resp-max("m") {
+            width: 100%;
+            z-index: 1;
+        }
+
+        &-field {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+
+            &-button {
+                border: 0;
+                background-color: transparent;
+                background-image: url(../img/icons/search.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                filter: brightness(0);
+                width: 16px;
+                height: 16px;
+                font-size: 0;
+                position: absolute;
+                margin-bottom: 16px;
+                cursor: pointer;
+            }
+
+            &-close {
+                background-image: url(../img/icons/close-black.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 14px;
+                height: 14px;
+                margin-left: auto;
+                margin-bottom: 16px;
+            }
+        }
+
+        &-results {
+            display: flex;
+            flex-direction: column;
+
+            &-line {
+                margin: 8px 0;
+                color: $grey-color;
+
+                &-link {
+                    margin-left: 16px;
+                }
+            }
+        }
+
+        &-text-input {
+            width: 90%;
+            border-bottom: 1px solid $border-grey-color;
+            box-shadow: none;
+            padding: 0 0 16px 30px;
+            border-radius: 0;
         }
     }
 }

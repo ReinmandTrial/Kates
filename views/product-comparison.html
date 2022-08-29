@@ -5,14 +5,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact</title>
+  <title>Product comparison</title>
 
   <link rel="icon" href="img/favicon.png" />
   <link rel="stylesheet" href="styles/base.css" />
-  <link rel="stylesheet" href="styles/template-contact.css" />
+  <link rel="stylesheet" href="styles/template-product.css" />
 </head>
 
-<body class="template-contact">
+<body class="template-product">
   <header class="header">
     <div class="top-header">
       <div class="container">
@@ -111,274 +111,334 @@
     <div class="container">
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item"><a href="">Sākums</a></li>
-        <li class="breadcrumbs-item"><a href="">Kontakti</a></li>
+        <li class="breadcrumbs-item"><a href="">Produktu salīdzinājums</a></li>
       </ul>
     </div>
-    <section class="contact-main-section">
+    <section class="comparison-section">
       <div class="container">
-        <h3 class="h3-heading">Kontakti</h3>
-        <div class="contact-main-grid">
-          <div class="contact-main-item">
-            <img src="img/icons/contact-pin.svg" class="contact-main-item-image" alt="" />
-            <div class="contact-main-item-info">
-              <p class="text"><b>Biroja / noliktavas adrese</b></p>
-              <p class="text">
-                Uriekstes iela 2c, Rīga,
-                <br />
-                LV-1005, Latvija
-              </p>
+        <h3 class="h3-heading">Produktu salīdzinājums</h3>
+        <div class="comparison-card-row">
+          <div class="comparison-card-heading product-block fadeInUp animate__animated animate__fadeInUp">
+            <label class="choice-label">
+              <input type="radio" name="comparison" class="choice-label-checkbox choice-label-radio">
+              <span class="choice-label-checkmark">
+                <span class="choice-label-name">
+                  <b class="choice-label-name-main">Visi parametri</b>
+                </span>
+              </span>
+            </label>
+            <label class="choice-label">
+              <input type="radio" name="comparison" class="choice-label-checkbox choice-label-radio">
+              <span class="choice-label-checkmark">
+                <span class="choice-label-name">
+                  <b class="choice-label-name-main">Tikai atšķirības</b>
+                </span>
+              </span>
+            </label>
+          </div>
+          <div class="product-block fadeInUp animate__animated animate__fadeInUp">
+            <a href="" class="product-block-top">
+              <span class="product-block-top-badge">
+                <span class="product-block-top-badge-item">Akcija</span>
+              </span>
+              <img src="img/products/product-1.jpg" class="product-block-top-image" alt="">
+            </a>
+            <div class="product-block-text">
+              <button class="product-block-remove"></button>
+              <a href="" class="product-block-name">Līmēta priede FIX A/A 3000x1200x33</a>
+              <div class="product-block-desc">
+                <span class="product-block-desc-line">SKU: 02.CA-13.12009</span>
+                <span class="product-block-desc-line">Ražotāja kods: RO 013</span>
+              </div>
+              <div class="product-block-price flexbox-full h-sb">
+                <div class="product-block-price-current">
+                  <p class="product-block-price-full">12,00 €</p>
+                  <p class="product-block-price-tax">9,48 € + PVN</p>
+                </div>
+                <div class="product-block-price-old">
+                  <p class="product-block-price-full">15,00 €</p>
+                  <p class="product-block-price-tax">12,48 € + PVN</p>
+                </div>
+              </div>
+              <p class="product-block-stock product-block-stock-in">Ir noliktavā</p>
+              <button class="button button-red-fill button-add-cart">Ielikt grozā</button>
             </div>
           </div>
-          <div class="contact-main-item">
-            <img src="img/icons/contact-mail.svg" class="contact-main-item-image" alt="" />
-            <div class="contact-main-item-info">
-              <p class="text"><b>E-pasts</b></p>
-              <p class="text"><a href="mailto:plates@katesplates.lv">plates@katesplates.lv</a></p>
+          <div class="product-block fadeInUp animate__animated animate__fadeInUp">
+            <a href="" class="product-block-top">
+              <span class="product-block-top-badge">
+                <span class="product-block-top-badge-item">Akcija</span>
+              </span>
+              <img src="img/products/product-1.jpg" class="product-block-top-image" alt="">
+            </a>
+            <div class="product-block-text">
+              <button class="product-block-remove"></button>
+              <a href="" class="product-block-name">Līmēta priede FIX A/A 3000x1200x33</a>
+              <div class="product-block-desc">
+                <span class="product-block-desc-line">SKU: 02.CA-13.12009</span>
+                <span class="product-block-desc-line">Ražotāja kods: RO 013</span>
+              </div>
+              <div class="product-block-price flexbox-full h-sb">
+                <div class="product-block-price-current">
+                  <p class="product-block-price-full">12,00 €</p>
+                  <p class="product-block-price-tax">9,48 € + PVN</p>
+                </div>
+                <div class="product-block-price-old">
+                  <p class="product-block-price-full">15,00 €</p>
+                  <p class="product-block-price-tax">12,48 € + PVN</p>
+                </div>
+              </div>
+              <p class="product-block-stock product-block-stock-in">Ir noliktavā</p>
+              <button class="button button-red-fill button-add-cart">Ielikt grozā</button>
             </div>
           </div>
-          <div class="contact-main-item">
-            <img src="img/icons/contact-time.svg" class="contact-main-item-image" alt="" />
-            <div class="contact-main-item-info">
-              <p class="text"><b>Darba laiks</b></p>
-              <p class="text">
-                Pirmdiena - piektdiena
-                <br />
-                9:00 - 18:00
-              </p>
+          <div class="product-block fadeInUp animate__animated animate__fadeInUp">
+            <a href="" class="product-block-top">
+              <span class="product-block-top-badge">
+                <span class="product-block-top-badge-item">Akcija</span>
+              </span>
+              <img src="img/products/product-1.jpg" class="product-block-top-image" alt="">
+            </a>
+            <div class="product-block-text">
+              <button class="product-block-remove"></button>
+              <a href="" class="product-block-name">Līmēta priede FIX A/A 3000x1200x33</a>
+              <div class="product-block-desc">
+                <span class="product-block-desc-line">SKU: 02.CA-13.12009</span>
+                <span class="product-block-desc-line">Ražotāja kods: RO 013</span>
+              </div>
+              <div class="product-block-price flexbox-full h-sb">
+                <div class="product-block-price-current">
+                  <p class="product-block-price-full">12,00 €</p>
+                  <p class="product-block-price-tax">9,48 € + PVN</p>
+                </div>
+                <div class="product-block-price-old">
+                  <p class="product-block-price-full">15,00 €</p>
+                  <p class="product-block-price-tax">12,48 € + PVN</p>
+                </div>
+              </div>
+              <p class="product-block-stock product-block-stock-in">Ir noliktavā</p>
+              <button class="button button-red-fill button-add-cart">Ielikt grozā</button>
             </div>
           </div>
-          <div class="contact-main-item">
-            <img src="img/icons/contact-bank.svg" class="contact-main-item-image" alt="" />
-            <div class="contact-main-item-info">
-              <p class="text"><b>Rekvizīti</b></p>
-              <p class="text">
-                Kates Plates, SIA
-                <br />
-                PVN maksātāja Nr: LV 40003355395
-                <br />
-                Banka: AS "SWEDBANK"
-                <br />
-                SWIFT kods: HABALV22
-                <br />
-                Bankas konts: LV05HABA0001408051455
-                <br />
-                Juridiskā adrese: Uriekstes iela 2c, Rīga, LV-1005, Latvija
-              </p>
+          <div class="product-block fadeInUp animate__animated animate__fadeInUp">
+            <a href="" class="product-block-top">
+              <span class="product-block-top-badge">
+                <span class="product-block-top-badge-item">Akcija</span>
+              </span>
+              <img src="img/products/product-1.jpg" class="product-block-top-image" alt="">
+            </a>
+            <div class="product-block-text">
+              <button class="product-block-remove"></button>
+              <a href="" class="product-block-name">Līmēta priede FIX A/A 3000x1200x33</a>
+              <div class="product-block-desc">
+                <span class="product-block-desc-line">SKU: 02.CA-13.12009</span>
+                <span class="product-block-desc-line">Ražotāja kods: RO 013</span>
+              </div>
+              <div class="product-block-price flexbox-full h-sb">
+                <div class="product-block-price-current">
+                  <p class="product-block-price-full">12,00 €</p>
+                  <p class="product-block-price-tax">9,48 € + PVN</p>
+                </div>
+                <div class="product-block-price-old">
+                  <p class="product-block-price-full">15,00 €</p>
+                  <p class="product-block-price-tax">12,48 € + PVN</p>
+                </div>
+              </div>
+              <p class="product-block-stock product-block-stock-in">Ir noliktavā</p>
+              <button class="button button-red-fill button-add-cart">Ielikt grozā</button>
+            </div>
+          </div>
+        </div>
+        <div class="comparison-table-container">
+          <div class="comparison-table">
+            <div class="comparison-table-heading">
+              <h5 class="h5-heading">Kopējie parametri</h5>
+            </div>
+            <div class="comparison-table-row">
+              <div class="comparison-table-column comparison-table-column-heading">
+                <ul class="comparison-table-column-list">
+                  <li>Biezums</li>
+                  <li>Koka suga</li>
+                  <li>Kvalitāte</li>
+                  <li>Loksnes izmērs</li>
+                  <li>Pieejamība</li>
+                  <li>Pielietojums</li>
+                </ul>
+              </div>
+              <div class="comparison-table-column">
+                <ul class="comparison-table-column-list">
+                  <li>25 mm</li>
+                  <li>Bērzs</li>
+                  <li>9 mm</li>
+                  <li>F2/W2</li>
+                  <li>2500 mm x 1250 mm</li>
+                  <li>Exterior - ārdarbiem</li>
+                </ul>
+              </div>
+              <div class="comparison-table-column">
+                <ul class="comparison-table-column-list">
+                  <li>25 mm</li>
+                  <li>Bērzs</li>
+                  <li>9 mm</li>
+                  <li>F2/W2</li>
+                  <li>2500 mm x 1250 mm</li>
+                  <li>Exterior - ārdarbiem</li>
+                </ul>
+              </div>
+              <div class="comparison-table-column">
+                <ul class="comparison-table-column-list">
+                  <li>25 mm</li>
+                  <li>Bērzs</li>
+                  <li>9 mm</li>
+                  <li>F2/W2</li>
+                  <li>2500 mm x 1250 mm</li>
+                  <li>Exterior - ārdarbiem</li>
+                </ul>
+              </div>
+              <div class="comparison-table-column">
+                <ul class="comparison-table-column-list">
+                  <li>25 mm</li>
+                  <li>Bērzs</li>
+                  <li>9 mm</li>
+                  <li>F2/W2</li>
+                  <li>2500 mm x 1250 mm</li>
+                  <li>Exterior - ārdarbiem</li>
+                </ul>
+              </div>
+            </div>
+            <div class="comparison-table-heading">
+              <h5 class="h5-heading">Tehniskā specifikācija</h5>
+            </div>
+            <div class="comparison-table-row">
+              <div class="comparison-table-column comparison-table-column-heading">
+                <ul class="comparison-table-column-list">
+                  <li>Biezums</li>
+                  <li>Koka suga</li>
+                  <li>Kvalitāte</li>
+                  <li>Loksnes izmērs</li>
+                  <li>Pieejamība</li>
+                  <li>Pielietojums</li>
+                </ul>
+              </div>
+              <div class="comparison-table-column">
+                <ul class="comparison-table-column-list">
+                  <li>25 mm</li>
+                  <li>Bērzs</li>
+                  <li>9 mm</li>
+                  <li>F2/W2</li>
+                  <li>2500 mm x 1250 mm</li>
+                  <li>Exterior - ārdarbiem</li>
+                </ul>
+              </div>
+              <div class="comparison-table-column">
+                <ul class="comparison-table-column-list">
+                  <li>25 mm</li>
+                  <li>Bērzs</li>
+                  <li>9 mm</li>
+                  <li>F2/W2</li>
+                  <li>2500 mm x 1250 mm</li>
+                  <li>Exterior - ārdarbiem</li>
+                </ul>
+              </div>
+              <div class="comparison-table-column">
+                <ul class="comparison-table-column-list">
+                  <li>25 mm</li>
+                  <li>Bērzs</li>
+                  <li>9 mm</li>
+                  <li>F2/W2</li>
+                  <li>2500 mm x 1250 mm</li>
+                  <li>Exterior - ārdarbiem</li>
+                </ul>
+              </div>
+              <div class="comparison-table-column">
+                <ul class="comparison-table-column-list">
+                  <li>25 mm</li>
+                  <li>Bērzs</li>
+                  <li>9 mm</li>
+                  <li>F2/W2</li>
+                  <li>2500 mm x 1250 mm</li>
+                  <li>Exterior - ārdarbiem</li>
+                </ul>
+              </div>
+            </div>
+            <div class="comparison-table-heading">
+              <h5 class="h5-heading">Cita informācija</h5>
+            </div>
+            <div class="comparison-table-row">
+              <div class="comparison-table-column comparison-table-column-heading">
+                <ul class="comparison-table-column-list">
+                  <li>Biezums</li>
+                  <li>Koka suga</li>
+                  <li>Kvalitāte</li>
+                  <li>Loksnes izmērs</li>
+                  <li>Pieejamība</li>
+                  <li>Pielietojums</li>
+                </ul>
+              </div>
+              <div class="comparison-table-column">
+                <ul class="comparison-table-column-list">
+                  <li>25 mm</li>
+                  <li>Bērzs</li>
+                  <li>9 mm</li>
+                  <li>F2/W2</li>
+                  <li>2500 mm x 1250 mm</li>
+                  <li>Exterior - ārdarbiem</li>
+                </ul>
+              </div>
+              <div class="comparison-table-column">
+                <ul class="comparison-table-column-list">
+                  <li>25 mm</li>
+                  <li>Bērzs</li>
+                  <li>9 mm</li>
+                  <li>F2/W2</li>
+                  <li>2500 mm x 1250 mm</li>
+                  <li>Exterior - ārdarbiem</li>
+                </ul>
+              </div>
+              <div class="comparison-table-column">
+                <ul class="comparison-table-column-list">
+                  <li>25 mm</li>
+                  <li>Bērzs</li>
+                  <li>9 mm</li>
+                  <li>F2/W2</li>
+                  <li>2500 mm x 1250 mm</li>
+                  <li>Exterior - ārdarbiem</li>
+                </ul>
+              </div>
+              <div class="comparison-table-column">
+                <ul class="comparison-table-column-list">
+                  <li>25 mm</li>
+                  <li>Bērzs</li>
+                  <li>9 mm</li>
+                  <li>F2/W2</li>
+                  <li>2500 mm x 1250 mm</li>
+                  <li>Exterior - ārdarbiem</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div id="map" class="google-map"></div>
     </section>
-
-    <section class="contact-team-section">
+    <section class="comparison-production-section">
       <div class="container">
-        <h4 class="h4-heading">Tirdzniecība</h4>
-        <div class="contact-team-grid">
-          <div class="contact-team-item">
-            <img src="img/contact/team-1.jpg" class="contact-team-item-image" alt="" />
-            <h6 class="h6-heading">Andris Dimants</h6>
-            <p class="text">Mēbeļu materiālu tirdzniecība</p>
-            <div class="contact-team-item-info">
-              <a href="">
-                <img src="img/icons/contact-phone.svg" alt="" />
-                +371 29497010
-              </a>
-              <a href="">
-                <img src="img/icons/contact-mail.svg" alt="" />
-                dimants@katesplates.lv
-              </a>
+        <div class="flexbox-full">
+          <div class="col col-50 col-l-full">
+            <div class="comparison-production-text">
+              <h3 class="h3-heading">Kates plates produkcijas priekšrocības</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ultricies mauris nec mi auctor, ut
+                dapibus ligula eleifend. Cras at tincidunt felis. Integer vel volutpat nulla. In hac habitasse platea
+                dictumst. Pellentesque tincidunt mi et libero finibus, nec cursus tellus varius. In eleifend lacus eget
+                magna fringilla aliquet.</p>
+              <a href="" class="arrow-link">Lasīt vairāk</a>
             </div>
           </div>
-          <div class="contact-team-item">
-            <img src="img/contact/team-2.jpg" class="contact-team-item-image" alt="" />
-            <h6 class="h6-heading">Valters Mintāns</h6>
-            <p class="text">Mēbeļu materiālu tirdzniecība</p>
-            <div class="contact-team-item-info">
-              <a href="">
-                <img src="img/icons/contact-phone.svg" alt="" />
-                +371 29497010
-              </a>
-              <a href="">
-                <img src="img/icons/contact-mail.svg" alt="" />
-                dimants@katesplates.lv
-              </a>
-            </div>
-          </div>
-          <div class="contact-team-item">
-            <img src="img/contact/team-3.jpg" class="contact-team-item-image" alt="" />
-            <h6 class="h6-heading">Atis Ciemītis</h6>
-            <p class="text">Mēbeļu materiālu tirdzniecība</p>
-            <div class="contact-team-item-info">
-              <a href="">
-                <img src="img/icons/contact-phone.svg" alt="" />
-                +371 29497010
-              </a>
-              <a href="">
-                <img src="img/icons/contact-mail.svg" alt="" />
-                dimants@katesplates.lv
-              </a>
-            </div>
-          </div>
-          <div class="contact-team-item">
-            <img src="img/contact/team-4.jpg" class="contact-team-item-image" alt="" />
-            <h6 class="h6-heading">Alens Alks</h6>
-            <p class="text">Mēbeļu materiālu tirdzniecība</p>
-            <div class="contact-team-item-info">
-              <a href="">
-                <img src="img/icons/contact-phone.svg" alt="" />
-                +371 29497010
-              </a>
-              <a href="">
-                <img src="img/icons/contact-mail.svg" alt="" />
-                dimants@katesplates.lv
-              </a>
-            </div>
-          </div>
-          <div class="contact-team-item">
-            <img src="img/contact/team-1.jpg" class="contact-team-item-image" alt="" />
-            <h6 class="h6-heading">Gundars spots</h6>
-            <p class="text">Mēbeļu materiālu tirdzniecība</p>
-            <div class="contact-team-item-info">
-              <a href="">
-                <img src="img/icons/contact-phone.svg" alt="" />
-                +371 29497010
-              </a>
-              <a href="">
-                <img src="img/icons/contact-mail.svg" alt="" />
-                dimants@katesplates.lv
-              </a>
-            </div>
-          </div>
-          <div class="contact-team-item">
-            <img src="img/contact/team-2.jpg" class="contact-team-item-image" alt="" />
-            <h6 class="h6-heading">Edgars Ancāns</h6>
-            <p class="text">Mēbeļu materiālu tirdzniecība</p>
-            <div class="contact-team-item-info">
-              <a href="">
-                <img src="img/icons/contact-phone.svg" alt="" />
-                +371 29497010
-              </a>
-              <a href="">
-                <img src="img/icons/contact-mail.svg" alt="" />
-                dimants@katesplates.lv
-              </a>
-            </div>
-          </div>
-          <div class="contact-team-item">
-            <img src="img/contact/team-3.jpg" class="contact-team-item-image" alt="" />
-            <h6 class="h6-heading">Valts Sūna</h6>
-            <p class="text">Mēbeļu materiālu tirdzniecība</p>
-            <div class="contact-team-item-info">
-              <a href="">
-                <img src="img/icons/contact-phone.svg" alt="" />
-                +371 29497010
-              </a>
-              <a href="">
-                <img src="img/icons/contact-mail.svg" alt="" />
-                dimants@katesplates.lv
-              </a>
-            </div>
-          </div>
-          <div class="contact-team-item">
-            <img src="img/contact/team-4.jpg" class="contact-team-item-image" alt="" />
-            <h6 class="h6-heading">Andris karlsons</h6>
-            <p class="text">Mēbeļu materiālu tirdzniecība</p>
-            <div class="contact-team-item-info">
-              <a href="">
-                <img src="img/icons/contact-phone.svg" alt="" />
-                +371 29497010
-              </a>
-              <a href="">
-                <img src="img/icons/contact-mail.svg" alt="" />
-                dimants@katesplates.lv
-              </a>
+          <div class="comparison-production-pictures">
+            <div class="comparison-production-image animate__animated animate__fadeInRight">
+              <img src="img/catalog/catalog-production.jpg" alt="">
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="contact-team-section">
-      <div class="container">
-        <h4 class="h4-heading">Mārketings un loģistika</h4>
-        <div class="contact-team-grid">
-          <div class="contact-team-item">
-            <img src="img/contact/team-1.jpg" class="contact-team-item-image" alt="" />
-            <h6 class="h6-heading">Andris Dimants</h6>
-            <p class="text">Mārketinga daļa</p>
-            <div class="contact-team-item-info">
-              <a href="">
-                <img src="img/icons/contact-phone.svg" alt="" />
-                +371 29497010
-              </a>
-              <a href="">
-                <img src="img/icons/contact-mail.svg" alt="" />
-                dimants@katesplates.lv
-              </a>
-            </div>
-          </div>
-          <div class="contact-team-item">
-            <img src="img/contact/team-2.jpg" class="contact-team-item-image" alt="" />
-            <h6 class="h6-heading">Evija Pokratniece</h6>
-            <p class="text">Loģistikas speciāliste</p>
-            <div class="contact-team-item-info">
-              <a href="">
-                <img src="img/icons/contact-phone.svg" alt="" />
-                +371 29497010
-              </a>
-              <a href="">
-                <img src="img/icons/contact-mail.svg" alt="" />
-                dimants@katesplates.lv
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact-form-section">
-      <div class="container">
-        <h4 class="h4-heading">Sazinies ar mums</h4>
-        <form action="" class="form order-form">
-          <label class="form-label form-label-half">
-            <span class="form-label-name">
-              Vārds
-              <span class="red">*</span>
-            </span>
-            <input type="text" class="form-text-input" />
-          </label>
-          <label class="form-label form-label-half">
-            <span class="form-label-name">
-              Uzvārds
-              <span class="red">*</span>
-            </span>
-            <input type="text" class="form-text-input" />
-          </label>
-          <label class="form-label form-label-half">
-            <span class="form-label-name">
-              Telefons
-              <span class="red">*</span>
-            </span>
-            <input type="tel" class="form-text-input" />
-          </label>
-          <label class="form-label form-label-half">
-            <span class="form-label-name">
-              E-pasts
-              <span class="red">*</span>
-            </span>
-            <input type="email" class="form-text-input" />
-          </label>
-          <label class="form-label form-label-full">
-            <span class="form-label-name">
-              Ziņa
-              <span class="red">*</span>
-            </span>
-            <textarea class="form-textarea"></textarea>
-          </label>
-          <input type="submit" class="button button-red-fill button-wide" value="Nosūtīt" />
-        </form>
-        <img src="img/contact/contact-form.jpg" class="contact-form-image" alt="" />
       </div>
     </section>
 
@@ -631,9 +691,6 @@
       </div>
     </section>
   </footer>
-  <script type="text/javascript"
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_dJWXsBpRxYoW6p5ajTlWpc5ZcQKRSN0&callback=initMap"
-    defer></script>
   <script src="js/app.js"></script>
 </body>
 

@@ -99,7 +99,8 @@
     }
   }
 
-  &-fav {
+  &-fav,
+  &-remove {
     position: absolute;
     top: 9px;
     right: 12px;
@@ -130,6 +131,21 @@
     }
   }
 
+  &-remove {
+    &:before {
+      background-image: url(../img/icons/close.svg);
+      width: 14px;
+      height: 14px;
+    }
+
+    &:hover,
+    &.active {
+      &:before {
+        background-image: url(../img/icons/close.svg);
+      }
+    }
+  }
+
   &-name {
     font-weight: 500;
     font-size: 18px;
@@ -156,6 +172,7 @@
       font-size: 24px;
       margin: 0 0 2px;
       font-weight: 700;
+      font-family: "Jost", sans-serif;
     }
 
     &-tax {
@@ -164,6 +181,10 @@
     }
 
     &-old {
+      .product-block-price-full {
+        font-size: 20px;
+      }
+
       p {
         color: $grey-color;
         text-align: right;

@@ -79,6 +79,7 @@
     }
 
     &-button {
+
       &-next,
       &-prev {
         background-color: $lightgrey-color;
@@ -117,7 +118,7 @@
       transform: none;
       display: flex;
       justify-content: space-between;
-      margin: 40px 0 0;
+      margin: 16px 0 0;
 
       .swiper-pagination-bullet {
         font-weight: 700;
@@ -128,6 +129,7 @@
         height: auto;
         background-color: transparent;
         font-size: 16px;
+        font-family: "Jost", sans-serif;
 
         &-active {
           ~.swiper-pagination-bullet {
@@ -137,11 +139,24 @@
       }
     }
 
+    .swiper-pagination-progressbar-fill {
+      height: 4px;
+      width: 100%;
+      background-color: $red-color;
+      top: auto;
+      bottom: 0;
+    }
+
     &-slide {
-        padding-right: 15px;
-        border-right: 1px solid $border-grey-color;
-        display: flex;
-        flex-direction: column;
+      padding-right: 15px;
+      border-right: 1px solid $border-grey-color;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+
+      &:last-of-type {
+        border-right: 0;
+      }
     }
 
     &-buttons {
@@ -152,9 +167,10 @@
     }
 
     &-button {
+
       &-next,
       &-prev {
-        background-color: #F5F6F6;
+        background-color: $lightgrey-color;
         border-radius: 2px;
         width: 56px;
         height: 56px;
@@ -163,8 +179,36 @@
         margin: 0;
 
         &:after {
-          color: #0A0A0A;
+          color: $black-color;
           font-size: 18px;
+        }
+      }
+    }
+
+    .swiper-pagination-custom {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      font-weight: 700;
+      margin-top: 40px;
+
+      li {
+        font-size: 16px;
+
+        span {
+          font-family: "Jost", sans-serif;
+        }
+
+        &.active {
+          span {
+            color: $black-color;
+          }
+
+          ~li {
+            span {
+              color: $grey-color;
+            }
+          }
         }
       }
     }
@@ -178,6 +222,6 @@
 
   &-image {
     border-radius: 8px;
-    margin-top: auto; 
+    margin-top: auto;
   }
 }

@@ -5,14 +5,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact</title>
+  <title>Profile Wishlist</title>
 
   <link rel="icon" href="img/favicon.png" />
   <link rel="stylesheet" href="styles/base.css" />
-  <link rel="stylesheet" href="styles/template-contact.css" />
+  <link rel="stylesheet" href="styles/template-profile.css" />
 </head>
 
-<body class="template-contact">
+<body class="template-profile">
   <header class="header">
     <div class="top-header">
       <div class="container">
@@ -27,22 +27,11 @@
             <li class="top-header-list-item"><a href="">Kontakti</a></li>
           </ul>
           <ul class="top-header-list top-header-list-links flexbox-full h-e">
-            <li class="top-header-list-item top-header-list-item-search">
-              <span><span class="top-header-list-item-image top-header-list-item-image-search"></span> Meklēt</span>
-              <div class="search">
-                <form action="" class="search-field">
-                  <input type="submit" class="search-field-button">
-                  <input type="text" class="form-text-input search-text-input">
-                  <button class="search-field-close"></button>
-                </form>
-                <div class="search-results">
-                  <span class="search-results-line">Saplāksnis /<a href="" class="search-results-line-link">Sapl., I/I (B/S), 1220x1220x15, bērzs</a></span>
-                  <span class="search-results-line">Saplāksnis /<a href="" class="search-results-line-link">Sapl., I/I (B/S), 1220x1220x18, bērzs</a></span>
-                  <span class="search-results-line">Saplāksnis /<a href="" class="search-results-line-link">Sapl., I/I (B/S), 1220x1220x12, bērzs</a></span>
-                  <span class="search-results-line">Saplāksnis /<a href="" class="search-results-line-link">Sapl., I/II (B/BB), 2440x1220x9 bērzs, EXT</a></span>
-                  <span class="search-results-line">Saplāksnis /<a href="" class="search-results-line-link">Sapl., I/II (B/BB), 2440x1220x12, bērzs, EXT</a></span>
-                </div>
-              </div>
+            <li class="top-header-list-item">
+              <a href="">
+                <img src="img/icons/search.svg" alt="" class="top-header-list-item-image" />
+                Meklēt
+              </a>
             </li>
             <li class="top-header-list-item">
               <a href="">
@@ -111,274 +100,106 @@
     <div class="container">
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item"><a href="">Sākums</a></li>
-        <li class="breadcrumbs-item"><a href="">Kontakti</a></li>
+        <li class="breadcrumbs-item"><a href="">Mans profils</a></li>
+        <li class="breadcrumbs-item"><a href="">Profila pārskats</a></li>
       </ul>
     </div>
-    <section class="contact-main-section">
+    <section class="profile-section">
       <div class="container">
-        <h3 class="h3-heading">Kontakti</h3>
-        <div class="contact-main-grid">
-          <div class="contact-main-item">
-            <img src="img/icons/contact-pin.svg" class="contact-main-item-image" alt="" />
-            <div class="contact-main-item-info">
-              <p class="text"><b>Biroja / noliktavas adrese</b></p>
-              <p class="text">
-                Uriekstes iela 2c, Rīga,
-                <br />
-                LV-1005, Latvija
-              </p>
+        <div class="profile-container">
+          <div class="profile-tabs">
+            <h3 class="h3-heading">Mans profils</h3>
+            <div class="profile-tabs-links">
+              <a href="">Profila pārskats</a>
+              <a href="">Pirkumu vēsture</a>
+              <a href="">Atlaižu līmenis</a>
+              <a href="" class="active">Vēlmju saraksts</a>
             </div>
           </div>
-          <div class="contact-main-item">
-            <img src="img/icons/contact-mail.svg" class="contact-main-item-image" alt="" />
-            <div class="contact-main-item-info">
-              <p class="text"><b>E-pasts</b></p>
-              <p class="text"><a href="mailto:plates@katesplates.lv">plates@katesplates.lv</a></p>
-            </div>
-          </div>
-          <div class="contact-main-item">
-            <img src="img/icons/contact-time.svg" class="contact-main-item-image" alt="" />
-            <div class="contact-main-item-info">
-              <p class="text"><b>Darba laiks</b></p>
-              <p class="text">
-                Pirmdiena - piektdiena
-                <br />
-                9:00 - 18:00
-              </p>
-            </div>
-          </div>
-          <div class="contact-main-item">
-            <img src="img/icons/contact-bank.svg" class="contact-main-item-image" alt="" />
-            <div class="contact-main-item-info">
-              <p class="text"><b>Rekvizīti</b></p>
-              <p class="text">
-                Kates Plates, SIA
-                <br />
-                PVN maksātāja Nr: LV 40003355395
-                <br />
-                Banka: AS "SWEDBANK"
-                <br />
-                SWIFT kods: HABALV22
-                <br />
-                Bankas konts: LV05HABA0001408051455
-                <br />
-                Juridiskā adrese: Uriekstes iela 2c, Rīga, LV-1005, Latvija
-              </p>
+          <div class="profile-content">
+            <div class="profile-content-line">
+              <h4 class="h4-heading">Vēlmju saraksts</h4>
+              <table class="table wish-table">
+                <tr class="table-row">
+                  <th class="table-heading">Nosaukums</th>
+                  <th class="table-heading">Cena</th>
+                </tr>
+                <tr class="table-row">
+                  <td class="table-item">
+                    <div class="wish-item-inner">
+                      <div class="wish-thumb">
+                        <img src="img/products/product-1.jpg" class="wish-thumb-image" alt="">
+                      </div>
+                      <div class="wish-main">
+                        <p class="wish-name">Laminēts saplāksnis, F2/W2 2500x1250x9</p>
+                        <p class="wish-code">SKU: 02.CA-13.12009</p>
+                        <p class="wish-code">Ražotāja kods: RO 013</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="table-item">
+                    <div class="wish-item-inner">
+                      <div class="wish-final">
+                        <span class="wish-final-current">12,00&nbsp;€</span>
+                        <del class="wish-final-old">19,48&nbsp;€</del>
+                      </div>
+                      <a href="" class="button button-red-fill">Ielikt grozā</a>
+                      <a href="" class="price-delete"></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="table-row">
+                  <td class="table-item">
+                    <div class="wish-item-inner">
+                      <div class="wish-thumb">
+                        <img src="img/products/product-2.jpg" class="wish-thumb-image" alt="">
+                      </div>
+                      <div class="wish-main">
+                        <p class="wish-name">Sapl., I/II (B/BB) 2400x1200x9 bērzs, EXT</p>
+                        <p class="wish-code">SKU: 02.CA-13.12009</p>
+                        <p class="wish-code">Ražotāja kods: RO 013</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="table-item">
+                    <div class="wish-item-inner">
+                      <div class="wish-final">
+                        <span class="wish-final-current">30,00&nbsp;€</span>
+                        <del class="wish-final-old">43,70&nbsp;€</del>
+                      </div>
+                      <a href="" class="button button-red-fill">Ielikt grozā</a>
+                      <a href="" class="price-delete"></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="table-row">
+                  <td class="table-item">
+                    <div class="wish-item-inner">
+                      <div class="wish-thumb">
+                        <img src="img/products/product-3.jpg" class="wish-thumb-image" alt="">
+                      </div>
+                      <div class="wish-main">
+                        <p class="wish-name">Laminēts saplāksnis, F2/W2 2500x1250x9</p>
+                        <p class="wish-code">SKU: 02.CA-13.12009</p>
+                        <p class="wish-code">Ražotāja kods: RO 013</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="table-item">
+                    <div class="wish-item-inner">
+                      <div class="wish-final">
+                        <span class="wish-final-current">30,00&nbsp;€</span>
+                        <del class="wish-final-old">9,48&nbsp;€</del>
+                      </div>
+                      <a href="" class="button button-red-fill">Ielikt grozā</a>
+                      <a href="" class="price-delete"></a>
+                    </div>
+                  </td>
+                </tr>
+              </table>
             </div>
           </div>
         </div>
-      </div>
-      <div id="map" class="google-map"></div>
-    </section>
-
-    <section class="contact-team-section">
-      <div class="container">
-        <h4 class="h4-heading">Tirdzniecība</h4>
-        <div class="contact-team-grid">
-          <div class="contact-team-item">
-            <img src="img/contact/team-1.jpg" class="contact-team-item-image" alt="" />
-            <h6 class="h6-heading">Andris Dimants</h6>
-            <p class="text">Mēbeļu materiālu tirdzniecība</p>
-            <div class="contact-team-item-info">
-              <a href="">
-                <img src="img/icons/contact-phone.svg" alt="" />
-                +371 29497010
-              </a>
-              <a href="">
-                <img src="img/icons/contact-mail.svg" alt="" />
-                dimants@katesplates.lv
-              </a>
-            </div>
-          </div>
-          <div class="contact-team-item">
-            <img src="img/contact/team-2.jpg" class="contact-team-item-image" alt="" />
-            <h6 class="h6-heading">Valters Mintāns</h6>
-            <p class="text">Mēbeļu materiālu tirdzniecība</p>
-            <div class="contact-team-item-info">
-              <a href="">
-                <img src="img/icons/contact-phone.svg" alt="" />
-                +371 29497010
-              </a>
-              <a href="">
-                <img src="img/icons/contact-mail.svg" alt="" />
-                dimants@katesplates.lv
-              </a>
-            </div>
-          </div>
-          <div class="contact-team-item">
-            <img src="img/contact/team-3.jpg" class="contact-team-item-image" alt="" />
-            <h6 class="h6-heading">Atis Ciemītis</h6>
-            <p class="text">Mēbeļu materiālu tirdzniecība</p>
-            <div class="contact-team-item-info">
-              <a href="">
-                <img src="img/icons/contact-phone.svg" alt="" />
-                +371 29497010
-              </a>
-              <a href="">
-                <img src="img/icons/contact-mail.svg" alt="" />
-                dimants@katesplates.lv
-              </a>
-            </div>
-          </div>
-          <div class="contact-team-item">
-            <img src="img/contact/team-4.jpg" class="contact-team-item-image" alt="" />
-            <h6 class="h6-heading">Alens Alks</h6>
-            <p class="text">Mēbeļu materiālu tirdzniecība</p>
-            <div class="contact-team-item-info">
-              <a href="">
-                <img src="img/icons/contact-phone.svg" alt="" />
-                +371 29497010
-              </a>
-              <a href="">
-                <img src="img/icons/contact-mail.svg" alt="" />
-                dimants@katesplates.lv
-              </a>
-            </div>
-          </div>
-          <div class="contact-team-item">
-            <img src="img/contact/team-1.jpg" class="contact-team-item-image" alt="" />
-            <h6 class="h6-heading">Gundars spots</h6>
-            <p class="text">Mēbeļu materiālu tirdzniecība</p>
-            <div class="contact-team-item-info">
-              <a href="">
-                <img src="img/icons/contact-phone.svg" alt="" />
-                +371 29497010
-              </a>
-              <a href="">
-                <img src="img/icons/contact-mail.svg" alt="" />
-                dimants@katesplates.lv
-              </a>
-            </div>
-          </div>
-          <div class="contact-team-item">
-            <img src="img/contact/team-2.jpg" class="contact-team-item-image" alt="" />
-            <h6 class="h6-heading">Edgars Ancāns</h6>
-            <p class="text">Mēbeļu materiālu tirdzniecība</p>
-            <div class="contact-team-item-info">
-              <a href="">
-                <img src="img/icons/contact-phone.svg" alt="" />
-                +371 29497010
-              </a>
-              <a href="">
-                <img src="img/icons/contact-mail.svg" alt="" />
-                dimants@katesplates.lv
-              </a>
-            </div>
-          </div>
-          <div class="contact-team-item">
-            <img src="img/contact/team-3.jpg" class="contact-team-item-image" alt="" />
-            <h6 class="h6-heading">Valts Sūna</h6>
-            <p class="text">Mēbeļu materiālu tirdzniecība</p>
-            <div class="contact-team-item-info">
-              <a href="">
-                <img src="img/icons/contact-phone.svg" alt="" />
-                +371 29497010
-              </a>
-              <a href="">
-                <img src="img/icons/contact-mail.svg" alt="" />
-                dimants@katesplates.lv
-              </a>
-            </div>
-          </div>
-          <div class="contact-team-item">
-            <img src="img/contact/team-4.jpg" class="contact-team-item-image" alt="" />
-            <h6 class="h6-heading">Andris karlsons</h6>
-            <p class="text">Mēbeļu materiālu tirdzniecība</p>
-            <div class="contact-team-item-info">
-              <a href="">
-                <img src="img/icons/contact-phone.svg" alt="" />
-                +371 29497010
-              </a>
-              <a href="">
-                <img src="img/icons/contact-mail.svg" alt="" />
-                dimants@katesplates.lv
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact-team-section">
-      <div class="container">
-        <h4 class="h4-heading">Mārketings un loģistika</h4>
-        <div class="contact-team-grid">
-          <div class="contact-team-item">
-            <img src="img/contact/team-1.jpg" class="contact-team-item-image" alt="" />
-            <h6 class="h6-heading">Andris Dimants</h6>
-            <p class="text">Mārketinga daļa</p>
-            <div class="contact-team-item-info">
-              <a href="">
-                <img src="img/icons/contact-phone.svg" alt="" />
-                +371 29497010
-              </a>
-              <a href="">
-                <img src="img/icons/contact-mail.svg" alt="" />
-                dimants@katesplates.lv
-              </a>
-            </div>
-          </div>
-          <div class="contact-team-item">
-            <img src="img/contact/team-2.jpg" class="contact-team-item-image" alt="" />
-            <h6 class="h6-heading">Evija Pokratniece</h6>
-            <p class="text">Loģistikas speciāliste</p>
-            <div class="contact-team-item-info">
-              <a href="">
-                <img src="img/icons/contact-phone.svg" alt="" />
-                +371 29497010
-              </a>
-              <a href="">
-                <img src="img/icons/contact-mail.svg" alt="" />
-                dimants@katesplates.lv
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact-form-section">
-      <div class="container">
-        <h4 class="h4-heading">Sazinies ar mums</h4>
-        <form action="" class="form order-form">
-          <label class="form-label form-label-half">
-            <span class="form-label-name">
-              Vārds
-              <span class="red">*</span>
-            </span>
-            <input type="text" class="form-text-input" />
-          </label>
-          <label class="form-label form-label-half">
-            <span class="form-label-name">
-              Uzvārds
-              <span class="red">*</span>
-            </span>
-            <input type="text" class="form-text-input" />
-          </label>
-          <label class="form-label form-label-half">
-            <span class="form-label-name">
-              Telefons
-              <span class="red">*</span>
-            </span>
-            <input type="tel" class="form-text-input" />
-          </label>
-          <label class="form-label form-label-half">
-            <span class="form-label-name">
-              E-pasts
-              <span class="red">*</span>
-            </span>
-            <input type="email" class="form-text-input" />
-          </label>
-          <label class="form-label form-label-full">
-            <span class="form-label-name">
-              Ziņa
-              <span class="red">*</span>
-            </span>
-            <textarea class="form-textarea"></textarea>
-          </label>
-          <input type="submit" class="button button-red-fill button-wide" value="Nosūtīt" />
-        </form>
-        <img src="img/contact/contact-form.jpg" class="contact-form-image" alt="" />
       </div>
     </section>
 
@@ -631,9 +452,6 @@
       </div>
     </section>
   </footer>
-  <script type="text/javascript"
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_dJWXsBpRxYoW6p5ajTlWpc5ZcQKRSN0&callback=initMap"
-    defer></script>
   <script src="js/app.js"></script>
 </body>
 

@@ -54,18 +54,31 @@
                         width: 18px;
                         height: 18px;
                         background-size: contain;
+                        transition: .3s;
                     }
 
                     .price-delete {
                         background-image: url(../img/icons/action-delete.svg);
+
+                        &:hover {
+                            background-image: url(../img/icons/action-delete-red.svg);
+                        }
                     }
 
                     .price-copy {
                         background-image: url(../img/icons/action-copy.svg);
+
+                        &:hover {
+                            background-image: url(../img/icons/action-copy-red.svg);
+                        }
                     }
 
                     .price-edit {
                         background-image: url(../img/icons/action-edit.svg);
+
+                        &:hover {
+                            background-image: url(../img/icons/action-edit-red.svg);
+                        }
                     }
                 }
             }
@@ -100,6 +113,26 @@
                 flex-wrap: wrap;
                 gap: 24px 16px;
             }
+        }
+    }
+}
+
+.button-add-line {
+    padding: 14px 32px 14px 22px;
+    &:before {
+        content: "";
+        background-image: url(../img/icons/plus.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+        margin-right: 14px;
+        transition: .3s;
+    }
+    &:hover {
+        &:before {
+            background-image: url(../img/icons/plus-red.svg);
         }
     }
 }

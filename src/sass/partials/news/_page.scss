@@ -3,6 +3,34 @@
     padding-bottom: 56px;
     border-bottom: 2px solid #EBEDEE;
   }
+
+  &-top {
+    margin-bottom: 36px;
+    display: flex;
+
+    &-filter {
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      gap: 32px;
+      align-items: center;
+
+      &-tag {
+        text-decoration: none;
+        font-weight: 500;
+
+        &.active {
+          color: $red-color;
+        }
+      }
+
+      &-shown {
+        margin-left: auto;
+        color: $grey-color;
+        font-weight: 400;
+      }
+    }
+  }
 }
 
 .pagination-number.active {

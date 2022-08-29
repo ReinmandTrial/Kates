@@ -7,7 +7,7 @@
     display: flex;
 
     @include resp-max("m") {
-        flex-direction: column;
+      flex-direction: column;
     }
   }
 
@@ -18,8 +18,8 @@
     padding: 24px 0;
 
     @include resp-max("m") {
-        margin-right: 0;
-        border-right: 0;
+      margin-right: 0;
+      border-right: 0;
     }
 
     &-links {
@@ -37,6 +37,7 @@
           color: $red-color;
           position: relative;
           overflow: hidden;
+
           &:after {
             content: "";
             width: 4px;
@@ -54,30 +55,98 @@
   &-content {
     padding: 32px 0 16px;
     flex-grow: 1;
+
     @include resp-max("m") {
       padding-top: 0;
     }
+
     &-line {
       margin: 56px 0;
+
       &-heading {
         display: flex;
         align-items: center;
         gap: 20px;
+
         .h5-heading {
           margin-bottom: 0;
         }
       }
+
       &-name {
         font-weight: 500;
       }
     }
-    a {
+
+    a:not([class]) {
       color: $red-color;
       text-decoration: none;
       font-weight: 500;
     }
+
     .table {
       margin-top: 8px;
+    }
+  }
+}
+
+.wish {
+  &-item-inner {
+    display: flex;
+    align-items: center;
+
+    .price-delete {
+      width: 20px;
+      height: 20px;
+      margin-left: 45px;
+      background-size: contain;
+      background-image: url(../img/icons/action-delete.svg);
+      transition: .3s;
+
+      &:hover {
+        background-image: url(../img/icons/action-delete-red.svg);
+      }
+    }
+  }
+
+  &-thumb {
+    width: 82px;
+    height: 82px;
+    position: relative;
+    margin-right: 16px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &-name {
+    margin: 0 0 8px;
+    font-size: 18px;
+  }
+
+  &-code {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 2px;
+  }
+
+  &-final {
+    display: flex;
+    flex-direction: column;
+    margin-right: 48px;
+
+    &-current {
+      font-size: 18px;
+    }
+
+    &-old {
+      font-size: 14px;
     }
   }
 }

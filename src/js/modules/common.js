@@ -27,6 +27,23 @@ const Common = {
       privateTabContent.classList.remove("active");
     });
 
+    // search open
+    document.querySelector(".top-header-list-item-search > span").addEventListener("click", function () {
+      document.getElementsByClassName("top-header-list-item-search")[0].classList.toggle("open");
+    });
+    document.getElementsByClassName("search-field-close")[0].addEventListener("click", function (e) {
+      e.preventDefault();
+      document.getElementsByClassName("top-header-list-item-search")[0].classList.toggle("open");
+    });
+
+    // if header has any active link, needed for styling
+    const headerActiveLinks = document.querySelectorAll('.main-header-block-item');
+    headerActiveLinks.forEach((headerActiveLink) => {
+      if(headerActiveLink.classList.contains("active")) {
+        document.getElementsByClassName("main-header-block-list")[0].classList.toggle("has-active-item");
+      }
+    });
+
     // making the mobile header, first checking the screen size
     if (window.screen.width <= 900) {
       let topHeaderTabs = document.getElementsByClassName("top-header-list-tabs")[0];
