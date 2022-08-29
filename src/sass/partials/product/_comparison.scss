@@ -4,6 +4,12 @@
         padding: 24px 0 40px;
     }
 
+    &-wrapper {
+        @include resp-max("l") {
+            overflow: auto;
+        }
+    }
+
     &-card {
         &-row {
             display: grid;
@@ -11,11 +17,22 @@
             grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
             gap: 16px;
 
+            @include resp-max("l") {
+                display: flex;
+                min-width: 1000px;
+            }
+
             .product-block {
                 width: auto;
 
+                @include resp-max("l") {
+                    min-width: 200px;
+                    width: 200px;
+                }
+
                 &-top {
                     height: 180px;
+
                     &-image {
                         height: auto;
                         width: 100%;
@@ -50,19 +67,13 @@
 
     &-table {
         @include resp-max("l") {
-            overflow: auto;
-            min-width: 1000px;
+            min-width: 1060px;
         }
 
         &-container {
             margin: 16px 0;
             position: relative;
             border-radius: 8px;
-            overflow: hidden;
-
-            @include resp-max("l") {
-                overflow: auto;
-            }
         }
 
         &-heading {
@@ -81,6 +92,10 @@
                 list-style: none;
                 padding: 0;
                 margin: 0;
+
+                @include resp-max("l") {
+                    min-width: 200px;
+                }
 
                 li {
                     padding: 12px 16px;

@@ -1,0 +1,59 @@
+.comparison {
+  &-chosen {
+    position: fixed;
+    background-color: $black-color;
+    bottom: 20px;
+    z-index: 1;
+    border-radius: 8px;
+    padding: 16px 40px 16px 16px;
+    display: none;
+
+    &.open {
+      display: flex;
+    }
+
+    @include resp-max("s") {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &-arrows {
+      max-width: 24px;
+    }
+
+    &-list {
+      margin: 0 20px;
+      display: flex;
+      gap: 14px;
+
+      @include resp-max("s") {
+        margin: 0;
+      }
+
+      &-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+        width: 48px;
+        height: 48px;
+        background-image: url(../img/icons/comparison-empty.svg);
+      }
+
+      img {
+        position: absolute;
+        width: 100%;
+      }
+    }
+
+    &-close {
+      background-image: url(../img/icons/close-white.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      top: 12px;
+      right: 12px;
+    }
+  }
+}

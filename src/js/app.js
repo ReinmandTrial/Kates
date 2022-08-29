@@ -16,10 +16,11 @@ import templateProduct from "./partials/template-product";
 import templateCheckout from "./partials/template-checkout";
 import templateNewsSingle from "./partials/template-news-single";
 import templateContact from "./partials/template-contact";
+import templateMaterialShop from "./partials/template-material-shop";
 
 // Populate Router instance with DOM routes
 const routes = new Router({
-  templateHome, templateAbout, templateProduct, templateCheckout, templateNewsSingle, templateContact
+  templateHome, templateAbout, templateProduct, templateCheckout, templateNewsSingle, templateContact, templateMaterialShop
 });
 
 // Load Events
