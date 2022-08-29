@@ -32,7 +32,8 @@
     }
 
     .top-header-list-item,
-    .top-header-list-item a {
+    .top-header-list-item > a,
+    .top-header-list-item > span {
         color: white;
     }
 
@@ -47,6 +48,10 @@
             border-right: 2px solid #fff;
             border-bottom: 2px solid #fff;
         }
+    }
+
+    .top-header-list-item-image-search {
+        filter: brightness(50);
     }
 }
 
@@ -120,6 +125,7 @@
 
                     .top-header-list-item-image-search {
                         background-image: url(../img/icons/search-red.svg);
+                        filter: brightness(1);
                     }
                 }
             }

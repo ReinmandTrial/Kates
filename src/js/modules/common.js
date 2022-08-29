@@ -209,6 +209,10 @@ const Common = {
       }
     });
 
+    setTimeout(function() {
+      document.querySelector(".modal").classList.add("modal-show")
+    }, 5000);
+
     // upload file
     const checkUpload = document.querySelector(".input-file");
     if (checkUpload) {
