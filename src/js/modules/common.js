@@ -205,12 +205,13 @@ const Common = {
       } else if ($target.dataset.close === "modal") {
         e.preventDefault();
         $target.closest(".modal").classList.remove("modal-show");
-        document.body.classList.toggle("no-scroll");
+        document.body.classList.remove("no-scroll");
       }
     });
 
     setTimeout(function() {
-      document.querySelector(".modal").classList.add("modal-show")
+      document.querySelector(".modal").classList.add("modal-show");
+      document.body.classList.add("no-scroll");
     }, 5000);
 
     // upload file

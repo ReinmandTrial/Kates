@@ -59,21 +59,7 @@ const TemplateAbout = {
         prevEl: ".about-timeline-slider-button-prev",
       },
 
-      // on: {
-      //   slideChange: () => {
-      //     fraction.textContent = `${SwiperAboutTimelineSlider.realIndex + 1} / ${slideCount}`;
-      //   }
-      // },
-
       on: {
-        // init: function () {
-        //   $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
-        //   $(".swiper-pagination-custom .swiper-pagination-switch").eq(0).addClass("active");
-        // },
-        // slideChangeTransitionStart: function () {
-        //   $(".swiper-pagination-custom .swiper-pagination-switch").removeClass("active");
-        //   $(".swiper-pagination-custom .swiper-pagination-switch").eq(SwiperAboutTimelineSlider.realIndex).addClass("active");
-        // }
         init: function () {
           swiperSwitch.forEach(function (el) {
             el.classList.remove("active");
@@ -82,24 +68,77 @@ const TemplateAbout = {
         },
         slideChangeTransitionStart: function () {
           swiperSwitch.forEach(function (el) {
-            // console.log(SwiperAboutTimelineSlider.realIndex)
-            for (var x = 0; x < swiperSwitch.length; x++){
+            for (var x = 0; x < swiperSwitch.length; x++) {
               el.classList.remove("active");
               swiperSwitch[SwiperAboutTimelineSlider.realIndex].classList.add("active");
             }
-            // console.log(el(SwiperAboutTimelineSlider.realIndex))
-            // this.classList.remove("active");
-            // el(SwiperAboutTimelineSlider.realIndex).classList.add("active");
           })
         }
       },
     });
 
-    // document.querySelector(".swiper-pagination-custom .swiper-pagination-switch").click(function () {
-    //   SwiperAboutTimelineSlider.slideTo(document.querySelector(this).index());
-    //   document.querySelector(".swiper-pagination-custom .swiper-pagination-switch").classList.remove("active");
-    //   document.querySelector(this).classList.add("active");
-    // })
+    function reveal() {
+      const counters = document.querySelectorAll('.about-features-item-number');
+      const speed = 3000;
+      for (let i = 0; i < counters.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = counters[i].getBoundingClientRect().top;
+        let elementVisible = 50;
+
+        if (elementTop < windowHeight - elementVisible) {
+          counters.forEach(counter => {
+            const animate = () => {
+              const value = +counter.getAttribute('count');
+              const data = +counter.innerText;
+      
+              const time = value / speed;
+              if (data < value) {
+                counter.innerText = Math.ceil(data + time);
+                setTimeout(animate, 5);
+              } else {
+                counter.innerText = value;
+              }
+            }
+      
+            animate();
+          });
+        }
+      }
+
+      // let reveals = document.querySelectorAll(".fadeInUp");
+      // for (let i = 0; i < reveals.length; i++) {
+      //   let windowHeight = window.innerHeight;
+      //   let elementTop = reveals[i].getBoundingClientRect().top;
+      //   let elementVisible = 50;
+
+      //   if (elementTop < windowHeight - elementVisible) {
+      //     reveals[i].classList.add("animate__animated", "animate__fadeInUp");
+      //   }
+      // }
+    }
+    window.addEventListener("scroll", reveal);
+
+    
+    // const counters = document.querySelectorAll('.about-features-item-number');
+    // const speed = 200;
+
+    // counters.forEach(counter => {
+    //   const animate = () => {
+    //     const value = +counter.getAttribute('count');
+    //     const data = +counter.innerText;
+
+    //     const time = value / speed;
+    //     if (data < value) {
+    //       counter.innerText = Math.ceil(data + time);
+    //       setTimeout(animate, 1);
+    //     } else {
+    //       counter.innerText = value;
+    //     }
+    //   }
+
+    //   animate();
+    // });
+
   },
 };
 
