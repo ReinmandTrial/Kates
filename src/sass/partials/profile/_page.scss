@@ -22,6 +22,10 @@
       border-right: 0;
     }
 
+    @include resp-max("s") {
+      display: none;
+    }
+
     &-links {
       display: flex;
       flex-direction: column;
@@ -63,6 +67,55 @@
     &-line {
       margin: 56px 0;
 
+      @include resp-max("s") {
+        padding-top: 0;
+
+        .table-text {
+          margin-bottom: 80px;
+
+          tbody {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+          }
+
+          .table-row {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+
+            &:last-of-type {
+              .table-item {
+                text-align: right;
+              }
+            }
+          }
+
+          .table-item,
+          .table-heading {
+            border-top: 0;
+            border-bottom: 1px solid $border-grey-color;
+
+            &:empty {
+              display: none;
+            }
+
+            &:last-of-type {
+              border-bottom: 0;
+            }
+
+            &-single {
+              position: absolute;
+              bottom: -50px;
+              left: 0vw;
+              right: 0vw;
+              transform: translateX(-32vw);
+              width: 100%;
+            }
+          }
+        }
+      }
+
       &-heading {
         display: flex;
         align-items: center;
@@ -75,6 +128,7 @@
 
       &-name {
         font-weight: 500;
+        margin: 20px 0 -10px;
       }
     }
 
@@ -82,10 +136,17 @@
       color: $red-color;
       text-decoration: none;
       font-weight: 500;
+
+      @include resp-max("m") {
+        &:only-of-type:last-of-type {
+          margin-left: auto;
+        }
+      }
     }
 
     .table {
       margin-top: 8px;
+      margin-bottom: 20px;
     }
   }
 }
@@ -101,6 +162,7 @@
       margin-left: 45px;
       background-size: contain;
       background-image: url(../img/icons/action-delete.svg);
+      background-repeat: no-repeat;
       transition: .3s;
 
       &:hover {

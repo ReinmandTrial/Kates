@@ -213,20 +213,6 @@ button {
     margin: 28px 0;
 
     &-item {
-        @include resp-max("m") {
-
-            // showing first and last breadcrumb on mobile
-            &:not(:first-of-type),
-            &:not(:last-of-type) {
-                display: none;
-            }
-
-            &:first-of-type,
-            &:last-of-type {
-                display: inline-block;
-            }
-        }
-
         a {
             color: $black-color;
             text-decoration: none;
@@ -254,6 +240,26 @@ button {
                 @include resp-max("m") {
                     margin: 0 10px;
                 }
+            }
+        }
+
+        @include resp-max("m") {
+            // showing first and last breadcrumb on mobile
+            &:not(:first-of-type),
+            &:not(:last-of-type) {
+                display: none;
+            }
+
+            &:last-of-type {
+                display: inline-block;
+
+                &:before {
+                    transform: rotate(180deg);
+                }
+            }
+
+            + .breadcrumbs-item:before {
+                margin-left: 0;
             }
         }
     }
