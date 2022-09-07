@@ -365,6 +365,10 @@
         &.overlay {
             display: block;
         }
+
+        .select-btn:after {
+            right: 0;
+        }
     }
 }
 

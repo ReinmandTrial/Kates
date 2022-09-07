@@ -7,7 +7,28 @@ const TemplateProduct = {
   },
 
   events() {
-    console.log("product");
+    // product video Swiper slider
+    const SwiperProductInfoSlider = new Swiper(".product-info-slider", {
+      slidesPerView: "auto",
+      spaceBetween: 8,
+      clickable: true,
+      breakpoints: {
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+      },
+
+      navigation: {
+        nextEl: ".product-info-slider-button-next",
+        prevEl: ".product-info-slider-button-prev",
+      },
+
+      pagination: {
+        el: ".product-info-slider-pagination",
+      },
+    });
+
     // product video Swiper slider
     const SwiperProductVideoSlider = new Swiper(".product-video-slider", {
       loop: true,
@@ -40,6 +61,10 @@ const TemplateProduct = {
       navigation: {
         nextEl: ".product-similar-slider-button-next",
         prevEl: ".product-similar-slider-button-prev",
+      },
+
+      pagination: {
+        el: ".product-similar-slider-pagination",
       },
     });
 
