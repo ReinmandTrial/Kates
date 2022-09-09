@@ -262,6 +262,9 @@
           left: 0;
         }
       }
+      @include resp-max("s") {
+        margin: 0 0 40px 0;
+      }
     }
   }
 }
@@ -751,6 +754,10 @@
 
     .product-block {
       margin-bottom: 0;
+
+      @include resp-max("m") {
+        margin: auto;
+      }
     }
   }
   &-row {

@@ -53,6 +53,10 @@
   .text {
     &:last-of-type {
         margin-bottom: 32px;
+
+        @include resp-max("m") {
+          margin-bottom: 16px;
+        }
       }
   }
 }

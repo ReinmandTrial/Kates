@@ -234,6 +234,7 @@ const TemplateProduct = {
       });
     }
 
+    // dropdowns
     let productSpecsDropdown = document.querySelectorAll(".product-specs-dropdown-top");
     for (var i = 0; i < productSpecsDropdown.length; i++) {
       productSpecsDropdown[i].addEventListener("click", function () {

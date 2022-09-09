@@ -28,6 +28,14 @@ const TemplateMaterialShop = {
     for (var i = 0, len = comparisonEl.length; i < len; i++) {
       button[i].addEventListener('click', remove, false);
     }
+
+    // dropdowns
+    let filterDropdown = document.querySelectorAll(".filter-sort-trigger");
+    for (var i = 0; i < filterDropdown.length; i++) {
+      filterDropdown[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+      });
+    }
   },
 };
 

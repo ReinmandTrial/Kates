@@ -69,6 +69,41 @@
 
     .h6-heading {
       margin: 0 0 16px;
+      position: relative;
+
+      @include resp-max("m") {
+        &:after {
+          content: "";
+          background-image: url(../img/icons/arrow-dark-down.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 14px;
+          height: 8px;
+          transition: .3s;
+          display: inline-block;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
+      }
+    }
+  }
+}
+
+.filter-sort-list {
+  @include resp-max("m") {
+    display: none;
+  }
+}
+.filter-sort-trigger.active {
+  @include resp-max("m") {
+  &:after {
+    transform: rotate(180deg);
+  }
+
+  + .filter-sort-list {
+      display: inline-block;
     }
   }
 }
@@ -175,7 +210,7 @@
 
           &-old {
             margin-top: 10px;
-  
+
             .product-block-price-full {
               font-size: 14px;
               text-align: left;
@@ -205,6 +240,19 @@
         &-image {
           height: auto;
           width: 100%;
+        }
+      }
+    }
+
+    @media (max-width: 420px) {
+      gap: 10px;
+      .product-block-text {
+        padding: 16px 12px;
+      }
+      .button-add-cart {
+        padding: 8px;
+        &:after {
+          margin-left: 8px;
         }
       }
     }

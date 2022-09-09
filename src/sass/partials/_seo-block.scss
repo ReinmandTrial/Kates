@@ -12,8 +12,20 @@
     top: 0;
 
     @include resp-max("l") {
-      position: static;
-      margin-top: 24px;
+      position: relative;
+      height: 300px;
+      width: 100vw;
+      overflow: hidden;
+      margin: 0 0 40px 0;
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    @include resp-max("s") {
+      margin: 0 0 40px -15px;
     }
   }
 

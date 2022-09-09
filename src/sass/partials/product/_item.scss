@@ -89,12 +89,22 @@
       gap: 8px;
       max-width: 200px;
 
+      @include resp-max("s") {
+        max-width: 110px;
+        top: 8px;
+        left: 8px;
+      }
+
       &-item {
         color: white;
         font-size: 14px;
         padding: 6px 16px;
         background-color: $red-color;
         border-radius: 20px;
+
+        @include resp-max("s") {
+          padding: 5px 8px;
+        }
       }
     }
   }

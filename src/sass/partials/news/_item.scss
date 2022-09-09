@@ -59,6 +59,10 @@
 
   &-text {
     padding: 32px 24px 36px;
+
+    @include resp-max("l") {
+      padding: 24px 16px;
+    }
   }
 
   .h5-heading {
