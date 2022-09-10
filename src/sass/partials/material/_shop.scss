@@ -26,8 +26,9 @@
       border-bottom: 1px solid $border-grey-color;
       padding: 24px 0 40px;
 
-      @include resp-max("s") {
-        padding: 24px 15px 40px;
+      @include resp-max("m") {
+        padding: 24px 16px;
+        border-bottom: 0;
       }
     }
 
@@ -62,6 +63,24 @@
     width: 100%;
     margin-right: 0;
     border: 0;
+    overflow: auto;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+    padding: 0 24px 24px;
+    margin-top: 120px;
+
+    .button {
+      width: 100%;
+      margin-top: auto;
+      text-align: center;
+    }
+  }
+
+  @include resp-max("s") {
+    height: 85vh;
   }
 
   &-sort {
@@ -79,7 +98,7 @@
           background-repeat: no-repeat;
           width: 14px;
           height: 8px;
-          transition: .3s;
+          transition: 0.3s;
           display: inline-block;
           position: absolute;
           right: 0;
@@ -87,6 +106,47 @@
           transform: translate(0, -50%);
         }
       }
+    }
+
+    @include resp-max("m") {
+      margin: 8px 0;
+
+      &:first-of-type {
+        margin-top: 32px;
+      }
+    }
+  }
+
+  &-mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    z-index: 2;
+
+    &-main {
+      height: 100%;
+    }
+
+    &-close {
+      width: 56px;
+      height: 56px;
+      position: absolute;
+      left: 24px;
+      background-color: $lightgrey-color;
+      background-image: url(../img/icons/arrow-dark-down.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: rotate(90deg);
+      border-radius: 8px;
+      top: 36px;
+    }
+
+    &-opened {
+      display: block;
     }
   }
 }
@@ -96,15 +156,38 @@
     display: none;
   }
 }
+
 .filter-sort-trigger.active {
   @include resp-max("m") {
-  &:after {
-    transform: rotate(180deg);
-  }
+    &:after {
+      transform: rotate(180deg);
+    }
 
-  + .filter-sort-list {
+    + .filter-sort-list {
       display: inline-block;
     }
+  }
+}
+
+.filter-open-button {
+  display: none;
+
+  @include resp-max("m") {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    flex-grow: 1;
+  }
+
+  &:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icons/filter.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
   }
 }
 
@@ -113,6 +196,7 @@
 
   @media (max-width: 1366px) {
     max-width: calc(100vw - 350px);
+    flex-grow: 1;
   }
 
   @include resp-max("m") {
@@ -124,22 +208,42 @@
     margin-bottom: 36px;
     display: flex;
 
-    &-filter {
+    &-filter-tag-container {
       display: flex;
-      flex-wrap: wrap;
       flex-grow: 1;
       gap: 16px;
       align-items: center;
+      flex-wrap: wrap;
+
+      @include resp-max("m") {
+        width: 100%;
+        flex-wrap: initial;
+        overflow: auto;
+      }
+    }
+
+    &-filter {
+      display: flex;
+      flex-grow: 1;
+      gap: 16px;
+      align-items: center;
+      max-width: 100%;
+
+      @include resp-max("m") {
+        flex-direction: column-reverse;
+      }
 
       &-tag {
         padding: 8px 12px 8px 16px;
         background-color: $lightgrey-color;
-        border-radius: 150px;
+        border-radius: 50px;
         font-size: 14px;
         font-weight: 500;
+        display: inline-block;
 
         @include resp-max("m") {
           padding: 4px 12px 4px 16px;
+          white-space: nowrap;
         }
 
         &-close {
@@ -161,12 +265,30 @@
 
           @include resp-max("m") {
             margin-left: 0;
+            position: absolute;
+            right: 0;
+            top: 70px;
           }
         }
       }
 
       &-sort {
         margin-bottom: 32px;
+      }
+    }
+
+    &-filter-container {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+
+      @include resp-max("m") {
+        width: 100%;
+
+        .filter-open-button,
+        .select {
+          flex-basis: 50%;
+        }
       }
     }
   }

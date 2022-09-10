@@ -10,10 +10,18 @@ const Common = {
     });
 
     // private or company tabs in header
-    let privateTabSelector = document.getElementsByClassName("private-tab-selector")[0];
-    let companyTabSelector = document.getElementsByClassName("company-tab-selector")[0];
-    let privateTabContent = document.getElementsByClassName("private-tab-content")[0];
-    let companyTabContent = document.getElementsByClassName("company-tab-content")[0];
+    let privateTabSelector = document.getElementsByClassName(
+      "private-tab-selector"
+    )[0];
+    let companyTabSelector = document.getElementsByClassName(
+      "company-tab-selector"
+    )[0];
+    let privateTabContent = document.getElementsByClassName(
+      "private-tab-content"
+    )[0];
+    let companyTabContent = document.getElementsByClassName(
+      "company-tab-content"
+    )[0];
     privateTabSelector.addEventListener("click", function () {
       this.classList.add("active");
       privateTabContent.classList.add("active");
@@ -28,33 +36,58 @@ const Common = {
     });
 
     // search open
-    document.querySelector(".top-header-list-item-search > span").addEventListener("click", function () {
-      document.getElementsByClassName("top-header-list-item-search")[0].classList.toggle("open");
-    });
-    document.getElementsByClassName("search-field-close")[0].addEventListener("click", function (e) {
-      e.preventDefault();
-      document.getElementsByClassName("top-header-list-item-search")[0].classList.toggle("open");
-    });
+    document
+      .querySelector(".top-header-list-item-search > span")
+      .addEventListener("click", function () {
+        document
+          .getElementsByClassName("top-header-list-item-search")[0]
+          .classList.toggle("open");
+      });
+    document
+      .getElementsByClassName("search-field-close")[0]
+      .addEventListener("click", function (e) {
+        e.preventDefault();
+        document
+          .getElementsByClassName("top-header-list-item-search")[0]
+          .classList.toggle("open");
+      });
 
     // if header has any active link, needed for styling
-    const headerActiveLinks = document.querySelectorAll('.main-header-block-item');
+    const headerActiveLinks = document.querySelectorAll(
+      ".main-header-block-item"
+    );
     headerActiveLinks.forEach((headerActiveLink) => {
-      if(headerActiveLink.classList.contains("active")) {
-        document.getElementsByClassName("main-header-block-list")[0].classList.toggle("has-active-item");
+      if (headerActiveLink.classList.contains("active")) {
+        document
+          .getElementsByClassName("main-header-block-list")[0]
+          .classList.toggle("has-active-item");
       }
     });
 
     // making the mobile header, first checking the screen size
     if (window.screen.width <= 900) {
-      let topHeaderTabs = document.getElementsByClassName("top-header-list-tabs")[0];
-      let topHeaderTabsContent = document.getElementsByClassName("main-header-links")[0];
-      let topHeaderLinks1 = document.querySelectorAll(".top-header-list-links")[0];
-      let topHeaderLinks2 = document.querySelectorAll(".top-header-list-links")[1];
+      let topHeaderTabs = document.getElementsByClassName(
+        "top-header-list-tabs"
+      )[0];
+      let topHeaderTabsContent =
+        document.getElementsByClassName("main-header-links")[0];
+      let topHeaderLinks1 = document.querySelectorAll(
+        ".top-header-list-links"
+      )[0];
+      let topHeaderLinks2 = document.querySelectorAll(
+        ".top-header-list-links"
+      )[1];
 
       // new containers
-      let topHeaderTabsMobile = document.getElementsByClassName("main-header-mobile-tabs")[0];
-      let topHeaderTabsMobileContent = document.getElementsByClassName("main-header-mobile-tabs-content")[0];
-      let topHeaderMobileLinks = document.getElementsByClassName("main-header-mobile-links")[0];
+      let topHeaderTabsMobile = document.getElementsByClassName(
+        "main-header-mobile-tabs"
+      )[0];
+      let topHeaderTabsMobileContent = document.getElementsByClassName(
+        "main-header-mobile-tabs-content"
+      )[0];
+      let topHeaderMobileLinks = document.getElementsByClassName(
+        "main-header-mobile-links"
+      )[0];
 
       // moving the desktop elements to new containers
       topHeaderTabsMobile.appendChild(topHeaderTabs);
@@ -116,9 +149,10 @@ const Common = {
     window.addEventListener("scroll", reveal);
 
     // info message
-    document.getElementsByClassName("info-message-close-button")[0].onclick = function () {
-      document.getElementsByClassName("info-message")[0].remove();
-    };
+    document.getElementsByClassName("info-message-close-button")[0].onclick =
+      function () {
+        document.getElementsByClassName("info-message")[0].remove();
+      };
 
     // product favourite item
     const productItemFavs = document.querySelectorAll(".product-block-fav");
@@ -140,7 +174,9 @@ const Common = {
     });
 
     // cart popup remove lines
-    let removeCartItems = document.getElementsByClassName("cart-popup-item-remove-button");
+    let removeCartItems = document.getElementsByClassName(
+      "cart-popup-item-remove-button"
+    );
     Array.from(removeCartItems).forEach((removeCartItem) => {
       removeCartItem.addEventListener("click", () => {
         removeCartItem.parentNode.remove();
@@ -159,7 +195,10 @@ const Common = {
     });
     minus_btns.forEach((btn) => {
       btn.addEventListener("click", () => {
-        btn.nextElementSibling.value = btn.nextElementSibling.value == 1 ? 1 : btn.nextElementSibling.value - 1;
+        btn.nextElementSibling.value =
+          btn.nextElementSibling.value == 1
+            ? 1
+            : btn.nextElementSibling.value - 1;
       });
     });
 
@@ -200,7 +239,9 @@ const Common = {
       if ($target.closest('[data-toggle="modal"]')) {
         e.preventDefault();
         $target = $target.closest('[data-toggle="modal"]');
-        document.querySelector($target.dataset.target).classList.add("modal-show");
+        document
+          .querySelector($target.dataset.target)
+          .classList.add("modal-show");
         document.body.classList.toggle("no-scroll");
       } else if ($target.dataset.close === "modal") {
         e.preventDefault();
@@ -209,9 +250,11 @@ const Common = {
       }
     });
 
-    setTimeout(function() {
-      document.querySelector(".modal").classList.add("modal-show");
-      document.body.classList.add("no-scroll");
+    setTimeout(function () {
+      document.querySelector(".modal")?.classList.add("modal-show");
+      if (document.body.contains(document.querySelector(".modal"))) {
+        document.body.classList.add("no-scroll");
+      }
     }, 5000);
 
     // upload file
