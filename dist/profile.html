@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="lv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/template-profile.css" />
+  </head>
+
+  <body class="template-profile">
+    <header class="header">
+      <div class="top-header">
+        <div class="container">
+          <div class="flexbox-full h-sb">
+            <ul class="top-header-list top-header-list-tabs flexbox-full">
+              <li class="top-header-list-item private-tab-selector active">Privātpersonām</li>
+              <li class="top-header-list-item company-tab-selector">Juridiskām personām</li>
+            </ul>
+            <ul class="top-header-list top-header-list-links flexbox-full h-sb">
+              <li class="top-header-list-item"><a href="">Jaunumi</a></li>
+              <li class="top-header-list-item"><a href="">Par mums</a></li>
+              <li class="top-header-list-item"><a href="">Kontakti</a></li>
+            </ul>
+            <ul class="top-header-list top-header-list-links flexbox-full h-e">
+              <li class="top-header-list-item">
+                <a href="">
+                  <img src="img/icons/search.svg" alt="" class="top-header-list-item-image" />
+                  Meklēt
+                </a>
+              </li>
+              <li class="top-header-list-item">
+                <a href="">
+                  <img src="img/icons/login.svg" alt="" class="top-header-list-item-image" />
+                  Pieslēgties
+                </a>
+              </li>
+              <li class="top-header-list-item">
+                <div class="select">
+                  <div class="select-btn" data-type="LV">LV</div>
+                  <div class="select-dropdown">
+                    <div class="select-option" data-type="EN">English</div>
+                    <div class="select-option" data-type="LV">Latviski</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="main-header">
+        <div class="container">
+          <div class="flexbox-full main-header-flex">
+            <button class="burger-button"></button>
+            <div class="main-header-mobile">
+              <h4 class="h4-heading center-text">Izvēlne</h4>
+              <div class="main-header-mobile-tabs"></div>
+              <div class="main-header-mobile-tabs-content"></div>
+              <div class="main-header-mobile-links"></div>
+            </div>
+            <a href="/">
+              <img src="img/logo-white.svg" class="logo-image" alt="" />
+            </a>
+            <nav class="main-header-links">
+              <ul class="main-header-block-list flexbox-full private-tab-content active h-sb">
+                <li class="main-header-block-item"><a href="">Konfigurators</a></li>
+                <li class="main-header-block-item"><a href="">Materiāli mēbeļu ražošanai</a></li>
+                <li class="main-header-block-item"><a href="">Materiāli celtniecībai</a></li>
+                <li class="main-header-block-item"><a href="">Instrumenti un palīgmateriāli</a></li>
+              </ul>
+              <ul class="main-header-block-list flexbox-full company-tab-content h-sb">
+                <li class="main-header-block-item"><a href="">Konfigurators 2</a></li>
+                <li class="main-header-block-item"><a href="">Materiāli mēbeļu ražošanai 2</a></li>
+                <li class="main-header-block-item"><a href="">Materiāli celtniecībai 2</a></li>
+                <li class="main-header-block-item"><a href="">Instrumenti un palīgmateriāli 2</a></li>
+              </ul>
+            </nav>
+            <div class="main-header-icons">
+              <ul class="main-header-block-list flexbox-full h-sb">
+                <li>
+                  <a href=""><img src="img/icons/arrows.svg" alt="" /></a>
+                </li>
+                <li>
+                  <a href=""><img src="img/icons/favourite.svg" alt="" /></a>
+                </li>
+                <li>
+                  <button class="cart-open-button"><img src="img/icons/cart.svg" alt="" /></button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs-item"><a href="">Sākums</a></li>
+          <li class="breadcrumbs-item"><a href="">Pasūtīšana</a></li>
+        </ul>
+      </div>
+      <section class="checkout-section">
+        <div class="container">
+          <h3 class="h3-heading">Pasūtīšana</h3>
+          <div class="checkout-line">
+            <div class="checkout-line-item active">
+              <span class="checkout-line-item-circle">1</span>
+              <span class="checkout-line-item-name">Reģistrācija</span>
+            </div>
+            <div class="checkout-line-item">
+              <span class="checkout-line-item-circle">2</span>
+              <span class="checkout-line-item-name">Informācija par pircēju</span>
+            </div>
+            <div class="checkout-line-item">
+              <span class="checkout-line-item-circle">3</span>
+              <span class="checkout-line-item-name">Apmaksa</span>
+            </div>
+            <div class="checkout-line-progress"></div>
+          </div>
+          <div class="checkout-steps">
+            <div class="checkout-step checkout-step-narrow checkout-step-1 active">
+              <div class="checkout-register">
+                <div class="checkout-register-col">
+                  <a href="" class="button button-red-fill"  data-toggle="modal" data-target="#modal-1">Reģistrēties</a>
+                  <p class="small-text">Jums jau ir profils?</p>
+                  <a href="" class="button button-black-fill" data-toggle="modal" data-target="#modal-2">Pieslēgties</a>
+                </div>
+                <div class="checkout-register-col">
+                  <a href="" class="button button-black next-step">Pirkt bez reģistrācijas</a>
+                </div>
+              </div>
+            </div>
+            <div class="checkout-step checkout-step-narrow checkout-step-2">
+              <h4 class="h4-heading">informācija par pircēju</h4>
+              <div class="tab-container">
+                <div class="tab-nav">
+                  <button data-tab="private" class="tab-nav-item active">Privātpersona</button>
+                  <button data-tab="company" class="tab-nav-item">Juridiska persona</button>
+                </div>
+                <div id="private" class="tab active">
+                  <form action="" class="form order-form">
+                    <label class="form-label form-label-half">
+                      <span class="form-label-name">
+                        Vārds
+                        <span class="red">*</span>
+                      </span>
+                      <input type="text" class="form-text-input" />
+                    </label>
+                    <label class="form-label form-label-half">
+                      <span class="form-label-name">
+                        Uzvārds
+                        <span class="red">*</span>
+                      </span>
+                      <input type="text" class="form-text-input" />
+                    </label>
+                    <label class="form-label form-label-half">
+                      <span class="form-label-name">
+                        Valsts
+                        <span class="red">*</span>
+                      </span>
+                      <div class="select">
+                        <div class="select-btn" data-type="Latvija">Latvija</div>
+                        <div class="select-dropdown select-dropdown-full">
+                          <div class="select-option" data-type="Latvija">Latvija</div>
+                          <div class="select-option" data-type="Lietuva">Lietuva</div>
+                        </div>
+                      </div>
+                    </label>
+                    <label class="form-label form-label-half">
+                      <span class="form-label-name">
+                        Adrese
+                        <span class="red">*</span>
+                      </span>
+                      <input type="text" class="form-text-input" />
+                    </label>
+                    <label class="form-label form-label-half">
+                      <span class="form-label-name">
+                        Pilsēta
+                        <span class="red">*</span>
+                      </span>
+                      <input type="text" class="form-text-input" />
+                    </label>
+                    <label class="form-label form-label-half">
+                      <span class="form-label-name">Pasta indekss</span>
+                      <input type="text" class="form-text-input" />
+                    </label>
+                    <label class="form-label form-label-half">
+                      <span class="form-label-name">
+                        Telefons
+                        <span class="red">*</span>
+                      </span>
+                      <input type="tel" class="form-text-input" />
+                    </label>
+                    <label class="form-label form-label-half">
+                      <span class="form-label-name">
+                        E-pasts
+                        <span class="red">*</span>
+                      </span>
+                      <input type="email" class="form-text-input" />
+                    </label>
+                    <label class="form-label form-label-full">
+                      <span class="form-label-name">
+                        Ziņa
+                        <span class="red">*</span>
+                      </span>
+                      <textarea class="form-textarea"></textarea>
+                    </label>
+                    <div class="order-form-line">
+                      <h4 class="h4-heading">Piegāde</h4>
+                      <div class="order-form-delivery">
+                        <label class="choice-label choice-label-square">
+                          <input type="radio" name="delivery" class="choice-label-checkbox choice-label-radio" />
+                          <span class="choice-label-checkmark">
+                            <span class="choice-label-name">
+                              <b class="choice-label-name-main">Omniva pakomāts</b>
+                              2,99 €
+                            </span>
+                          </span>
+                        </label>
+                        <label class="choice-label choice-label-square">
+                          <input type="radio" name="delivery" class="choice-label-checkbox choice-label-radio" />
+                          <span class="choice-label-checkmark">
+                            <span class="choice-label-name"><b class="choice-label-name-main">Latvijas pasts</b></span>
+                          </span>
+                        </label>
+                        <label class="choice-label choice-label-square">
+                          <input type="radio" name="delivery" class="choice-label-checkbox choice-label-radio" />
+                          <span class="choice-label-checkmark">
+                            <span class="choice-label-name"><b class="choice-label-name-main">Kurjers</b></span>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="order-form-line">
+                      <label class="form-label form-label-full">
+                        <span class="form-label-name">
+                          Izvēlieties pakomātu
+                          <span class="red">*</span>
+                        </span>
+                        <div class="order-form-line-address">
+                          <div class="select">
+                            <div class="select-btn" data-type="Brīvības 75 - 43">Brīvības 75 - 43</div>
+                            <div class="select-dropdown select-dropdown-full">
+                              <div class="select-option" data-type="Brīvības 75 - 43">Brīvības 75 - 43</div>
+                              <div class="select-option" data-type="Brīvības 74 - 42">Brīvības 74 - 42</div>
+                            </div>
+                          </div>
+                          <a href="" class="order-form-map-link">Apskatīt kartē</a>
+                        </div>
+                      </label>
+                      <button class="button button-red-fill next-step">Turpināt</button>
+                    </div>
+                  </form>
+                </div>
+                <div id="company" class="tab">
+                  <p>Another form can go here</p>
+                </div>
+              </div>
+            </div>
+            <div class="checkout-step checkout-step-3">
+              <div class="flexbox-full">
+                <div class="cart-list">
+                  <h4 class="h4-heading">Pasūtījuma kopsavilkums</h4>
+                  <div class="cart-item flexbox-full">
+                    <p class="cart-item-heading cart-item-heading-main">Nosaukums</p>
+                    <p class="cart-item-heading cart-item-heading-price">Cena</p>
+                    <p class="cart-item-heading cart-item-heading-amount">Daudzums</p>
+                    <p class="cart-item-heading cart-item-heading-final">Summa</p>
+                  </div>
+                  <div class="cart-item flexbox-full">
+                    <div class="cart-item-thumb">
+                      <img src="img/products/product-1.jpg" class="cart-item-thumb-image" alt="" />
+                    </div>
+                    <div class="cart-item-main">
+                      <p class="cart-item-name">Līmēta priede FIX A/A 3000x1200x33</p>
+                      <p class="cart-item-code">SKU: 02.CA-13.12009</p>
+                      <p class="cart-item-code">Ražotāja kods: RO 013</p>
+                    </div>
+                    <div class="cart-item-price">
+                      <p class="cart-item-price-full">
+                        <span class="cart-item-final-span">12,00</span>
+                        &nbsp;€
+                      </p>
+                    </div>
+                    <div class="cart-item-amount">
+                      <input type="number" inputmode="numeric" class="cart-item-amount-input" value="1" min="1" max="99" readonly />
+                    </div>
+                    <div class="cart-item-final">
+                      <span class="cart-item-final-span">12,00</span>
+                      &nbsp;€
+                      <p class="cart-item-price-tax">9,48 € + PVN</p>
+                    </div>
+                  </div>
+                  <div class="cart-item flexbox-full">
+                    <div class="cart-item-thumb">
+                      <img src="img/products/product-2.jpg" class="cart-item-thumb-image" alt="" />
+                    </div>
+                    <div class="cart-item-main">
+                      <p class="cart-item-name">Līmēta priede FIX A/A 3000x1200x33</p>
+                      <p class="cart-item-code">SKU: 02.CA-13.12009</p>
+                      <p class="cart-item-code">Ražotāja kods: RO 013</p>
+                    </div>
+                    <div class="cart-item-price">
+                      <p class="cart-item-price-full"><span class="cart-item-final-span">12,00&nbsp;€</span></p>
+                    </div>
+                    <div class="cart-item-amount">
+                      <input type="number" inputmode="numeric" class="cart-item-amount-input" value="1" min="1" max="99" readonly />
+                    </div>
+                    <div class="cart-item-final">
+                      <span class="cart-item-final-span">12,00</span>
+                      &nbsp;€
+                      <p class="cart-item-price-tax">9,48 € + PVN</p>
+                    </div>
+                  </div>
+                  <div class="cart-item flexbox-full">
+                    <div class="cart-item-thumb">
+                      <img src="img/products/product-3.jpg" class="cart-item-thumb-image" alt="" />
+                    </div>
+                    <div class="cart-item-main">
+                      <p class="cart-item-name">Līmēta priede FIX A/A 3000x1200x33</p>
+                      <p class="cart-item-code">SKU: 02.CA-13.12009</p>
+                      <p class="cart-item-code">Ražotāja kods: RO 013</p>
+                    </div>
+                    <div class="cart-item-price">
+                      <p class="cart-item-price-full">
+                        <span class="cart-item-price-full-span">12,00</span>
+                        &nbsp;€
+                      </p>
+                    </div>
+                    <div class="cart-item-amount">
+                      <input type="number" inputmode="numeric" class="cart-item-amount-input" value="1" min="1" max="99" readonly />
+                    </div>
+                    <div class="cart-item-final">
+                      <span class="cart-item-final-span">12,00</span>
+                      &nbsp;€
+                      <p class="cart-item-price-tax">9,48 € + PVN</p>
+                    </div>
+                  </div>
+                  <div class="cart-item flexbox-full">
+                    <div class="cart-item-thumb">
+                      <img src="img/products/product-4.jpg" class="cart-item-thumb-image" alt="" />
+                    </div>
+                    <div class="cart-item-main">
+                      <p class="cart-item-name">Līmēta priede FIX A/A 3000x1200x33</p>
+                      <p class="cart-item-code">SKU: 02.CA-13.12009</p>
+                      <p class="cart-item-code">Ražotāja kods: RO 013</p>
+                    </div>
+                    <div class="cart-item-price">
+                      <p class="cart-item-price-full">
+                        <span class="cart-item-price-full-span">12,00</span>
+                        &nbsp;€
+                      </p>
+                    </div>
+                    <div class="cart-item-amount">
+                      <input type="number" inputmode="numeric" class="cart-item-amount-input" value="1" min="1" max="99" readonly />
+                    </div>
+                    <div class="cart-item-final">
+                      <span class="cart-item-final-span">12,00</span>
+                      &nbsp;€
+                      <p class="cart-item-price-tax">9,48 € + PVN</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-total">
+                  <div class="cart-total-price">
+                    <div class="cart-total-price-line">
+                      <p>Cena bez PVN</p>
+                      <p>31,60 €</p>
+                    </div>
+                    <div class="cart-total-price-line">
+                      <p>PVN 21%</p>
+                      <p>8,40 €</p>
+                    </div>
+                    <div class="cart-total-price-line">
+                      <h5 class="h5-heading">kopā</h5>
+                      <h4 class="h4-heading">435,00 €</h4>
+                    </div>
+                  </div>
+                  <a href="" class="button button-red-fill">Pasūtīt</a>
+                </div>
+              </div>
+
+              <div class="order-form-line">
+                <h4 class="h4-heading">Apmaksa</h4>
+                <div class="order-form-delivery">
+                  <label class="choice-label choice-label-square">
+                    <input type="radio" name="delivery" class="choice-label-checkbox choice-label-radio" />
+                    <span class="choice-label-checkmark">
+                      <span class="choice-label-name choice-label-name-row">
+                        <img src="img/icons/card.svg" alt="" />
+                        <b class="choice-label-name-main">Maksājumu karte</b>
+                      </span>
+                    </span>
+                  </label>
+                  <label class="choice-label choice-label-square">
+                    <input type="radio" name="delivery" class="choice-label-checkbox choice-label-radio" />
+                    <span class="choice-label-checkmark">
+                      <span class="choice-label-name choice-label-name-row">
+                        <img src="img/icons/bank.svg" alt="" />
+                        <b class="choice-label-name-main">Bankas pārskaitījums</b>
+                      </span>
+                    </span>
+                  </label>
+                  <label class="choice-label choice-label-square">
+                    <input type="radio" name="delivery" class="choice-label-checkbox choice-label-radio" />
+                    <span class="choice-label-checkmark">
+                      <span class="choice-label-name choice-label-name-row">
+                        <img src="img/icons/mail.svg" alt="" />
+                        <b class="choice-label-name-main">Saņemt rēķinu e-pastā</b>
+                      </span>
+                    </span>
+                  </label>
+                </div>
+                <div class="order-form-payment">
+                  <label class="form-label">
+                    <span class="form-label-name">
+                      Kartes numurs
+                      <span class="red">*</span>
+                    </span>
+                    <input type="text" class="form-text-input" placeholder="1234 1234 1234 1234" />
+                  </label>
+                  <label class="form-label">
+                    <span class="form-label-name">
+                      Derīga līdz
+                      <span class="red">*</span>
+                    </span>
+                    <input type="text" class="form-text-input" placeholder="12/24" />
+                  </label>
+                  <label class="form-label">
+                    <span class="form-label-name">
+                      CVC
+                      <span class="red">*</span>
+                    </span>
+                    <input type="text" class="form-text-input" placeholder="123" />
+                  </label>
+                  <a href="" class="cvc-link">Kas ir CVC?</a>
+                </div>
+                <a href="" class="button button-red-fill last-step">Pabeigt pasūtījumu</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="modal modal-full" id="modal-1">
+        <div class="modal-content">
+          <span class="close-button" data-close="modal">×</span>
+          <div class="modal-full-image">
+            <img src="img/registration/reg-photo-1.jpg" alt="" />
+          </div>
+          <div class="modal-full-form">
+            <h3 class="h3-heading">Reģistrēties</h3>
+            <form action="" class="modal-form">
+              <label class="form-label form-label-full">
+                <span class="form-label-name">
+                  E-pasts
+                  <span class="red">*</span>
+                </span>
+                <input type="text" class="form-text-input" />
+              </label>
+              <p class="text">Uz Jūsu norādīto e-pasta adresi tiks nosūtīta pagaidu parole</p>
+              <label class="choice-label">
+                <span class="choice-label-name">Piekrītu un apstiprinu nosacījumus</span>
+                <input type="checkbox" class="choice-label-checkbox">
+                <span class="choice-label-checkmark"></span>
+              </label>
+              <input type="submit" class="button button-red-fill" value="Reģistrēties">
+              <p class="text">Man ir konts! <a href="">Pieslēgties</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal modal-full" id="modal-2">
+        <div class="modal-content">
+          <span class="close-button" data-close="modal">×</span>
+          <div class="modal-full-image">
+            <img src="img/registration/reg-photo-2.jpg" alt="" />
+          </div>
+          <div class="modal-full-form">
+            <h3 class="h3-heading">Pieslēgties</h3>
+            <form action="" class="modal-form">
+              <label class="form-label form-label-full">
+                <span class="form-label-name">
+                  E-pasts
+                  <span class="red">*</span>
+                </span>
+                <input type="text" class="form-text-input" />
+              </label>
+              <label class="form-label form-label-full">
+                <span class="form-label-name">
+                  Parole
+                  <span class="red">*</span>
+                </span>
+                <input type="text" class="form-text-input" />
+              </label>
+              <a href="">Aizmirsāt paroli?</a>
+              <input type="submit" class="button button-red-fill" value="Pieslēgties">
+              <p class="text">Jums vēl nav profila? <a href="">Reģistrējies</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal modal-full" id="modal-3">
+        <div class="modal-content">
+          <span class="close-button" data-close="modal">×</span>
+          <div class="modal-full-image">
+            <img src="img/registration/reg-photo-2.jpg" alt="" />
+          </div>
+          <div class="modal-full-form">
+            <h3 class="h3-heading">paldies!</h3>
+            <h5 class="h5-heading">Jūsu Maksājums ir pieņemts</h5>
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            <a href="" class="button button-red-fill">Uz sākumu</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-popup flexbox-full flexbox-column">
+        <div class="cart-popup-top flexbox-full h-sb">
+          <h4 class="h4-heading">Grozs</h4>
+          <button class="cart-popup-close"></button>
+        </div>
+        <div class="cart-popup-list">
+          <div class="cart-popup-item flexbox-full">
+            <div class="cart-popup-item-thumb">
+              <img src="img/products/product-1.jpg" class="cart-popup-item-thumb-image" alt="" />
+            </div>
+            <p class="cart-popup-item-name">Līmēta priede FIX A/A 3000x1200x33</p>
+            <div class="cart-popup-item-price">
+              <p class="cart-popup-item-price-full">
+                <span class="cart-popup-item-final-span">12,00</span>
+                €
+              </p>
+              <p class="cart-popup-item-price-tax">9,48 € + PVN</p>
+            </div>
+            <div class="cart-popup-item-amount">
+              <button class="cart-popup-item-amount-button cart-popup-item-amount-minus">-</button>
+              <input type="number" inputmode="numeric" class="cart-popup-item-amount-input" value="1" min="1" max="99" readonly />
+              <button class="cart-popup-item-amount-button cart-popup-item-amount-plus">+</button>
+            </div>
+            <p class="cart-popup-item-final">
+              <span class="cart-popup-item-final-span">12,00</span>
+              €
+            </p>
+            <button class="cart-popup-item-remove-button"></button>
+          </div>
+          <div class="cart-popup-item flexbox-full">
+            <div class="cart-popup-item-thumb">
+              <img src="img/products/product-2.jpg" class="cart-popup-item-thumb-image" alt="" />
+            </div>
+            <p class="cart-popup-item-name">Līmēta priede FIX A/A 3000x1200x33</p>
+            <div class="cart-popup-item-price">
+              <p class="cart-popup-item-price-full"><span class="cart-popup-item-final-span">12,00 €</span></p>
+              <p class="cart-popup-item-price-tax">9,48 € + PVN</p>
+            </div>
+            <div class="cart-popup-item-amount">
+              <button class="cart-popup-item-amount-button cart-popup-item-amount-minus">-</button>
+              <input type="number" inputmode="numeric" class="cart-popup-item-amount-input" value="1" min="1" max="99" readonly />
+              <button class="cart-popup-item-amount-button cart-popup-item-amount-plus">+</button>
+            </div>
+            <p class="cart-popup-item-final">
+              <span class="cart-popup-item-final-span">12,00</span>
+              €
+            </p>
+            <button class="cart-popup-item-remove-button"></button>
+          </div>
+          <div class="cart-popup-item flexbox-full">
+            <div class="cart-popup-item-thumb">
+              <img src="img/products/product-3.jpg" class="cart-popup-item-thumb-image" alt="" />
+            </div>
+            <p class="cart-popup-item-name">Līmēta priede FIX A/A 3000x1200x33</p>
+            <div class="cart-popup-item-price">
+              <p class="cart-popup-item-price-full">
+                <span class="cart-popup-item-price-full-span">12,00</span>
+                €
+              </p>
+              <p class="cart-popup-item-price-tax">9,48 € + PVN</p>
+            </div>
+            <div class="cart-popup-item-amount">
+              <button class="cart-popup-item-amount-button cart-popup-item-amount-minus">-</button>
+              <input type="number" inputmode="numeric" class="cart-popup-item-amount-input" value="1" min="1" max="99" readonly />
+              <button class="cart-popup-item-amount-button cart-popup-item-amount-plus">+</button>
+            </div>
+            <p class="cart-popup-item-final">
+              <span class="cart-popup-item-final-span">12,00</span>
+              €
+            </p>
+            <button class="cart-popup-item-remove-button"></button>
+          </div>
+          <div class="cart-popup-item flexbox-full">
+            <div class="cart-popup-item-thumb">
+              <img src="img/products/product-4.jpg" class="cart-popup-item-thumb-image" alt="" />
+            </div>
+            <p class="cart-popup-item-name">Līmēta priede FIX A/A 3000x1200x33</p>
+            <div class="cart-popup-item-price">
+              <p class="cart-popup-item-price-full">
+                <span class="cart-popup-item-price-full-span">12,00</span>
+                €
+              </p>
+              <p class="cart-popup-item-price-tax">9,48 € + PVN</p>
+            </div>
+            <div class="cart-popup-item-amount">
+              <button class="cart-popup-item-amount-button cart-popup-item-amount-minus">-</button>
+              <input type="number" inputmode="numeric" class="cart-popup-item-amount-input" value="1" min="1" max="99" readonly />
+              <button class="cart-popup-item-amount-button cart-popup-item-amount-plus">+</button>
+            </div>
+            <p class="cart-popup-item-final">
+              <span class="cart-popup-item-final-span">12,00</span>
+              €
+            </p>
+            <button class="cart-popup-item-remove-button"></button>
+          </div>
+        </div>
+        <div class="cart-popup-total flexbox-full">
+          <div class="cart-popup-total-links">
+            <div class="cart-popup-total-links-line">
+              <button class="button button-black">Atvērt grozu</button>
+            </div>
+            <div class="cart-popup-total-links-line">
+              <a href="" class="button button-red-fill">Nopirkt</a>
+            </div>
+          </div>
+          <div class="cart-popup-total-price">
+            <div class="cart-popup-total-price-line flexbox-full h-sb v-c">
+              <p>Cena bez PVN</p>
+              <p>31,60 €</p>
+            </div>
+            <div class="cart-popup-total-price-line flexbox-full h-sb v-c">
+              <p>PVN 21%</p>
+              <p>8,40 €</p>
+            </div>
+            <div class="cart-popup-total-price-line flexbox-full h-sb v-c">
+              <h5 class="h5-heading">Kopā</h5>
+              <h4 class="h4-heading">435,00 €</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="info-message">
+          <div class="flexbox-full info-message-block">
+            <div class="flexbox-full v-c info-message-top">
+              <img src="img/icons/exclamation-circle.svg" alt="" />
+              <h6 class="h6-heading">Izmaiņas</h6>
+            </div>
+            <div class="flexbox-full info-message-text">
+              <p>
+                Šodien strādājam
+                <b class="red">08.00–17.00</b>
+              </p>
+            </div>
+            <div class="flexbox-full flexbox-column info-message-text">
+              <p>
+                Pirmssvētku dienās
+                <b>30. aprīlī</b>
+                un
+                <b>3. maijā</b>
+                plkst.
+                <b>8.00 - 20.00</b>
+                ;
+              </p>
+              <p>
+                Svētku dienās
+                <b>1. maijā</b>
+                un
+                <b>4. maijā - Slēgts</b>
+              </p>
+            </div>
+            <button class="button button-red-fill info-message-close-button">Aizvērt</button>
+          </div>
+        </div>
+      </div>
+      <section class="newsletter-section">
+        <div class="container">
+          <div class="flexbox-full flexbox--grid">
+            <div class="col col-50 col-m-full">
+              <h4 class="h4-heading">Seko jaunumiem</h4>
+              <p class="text">Pieraksties, lai uzzinātu par jaunākajiem piedāvājumiem.</p>
+            </div>
+            <div class="col col-50 col-m-full flexbox-full h-e v-c">
+              <form action="" class="form newsletter-form">
+                <input type="email" placeholder="Jūsu e-pasts" class="form-text-input" />
+                <input type="submit" class="button button-red-fill" value="Pierakstīties" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="eu-note-section center-text">
+        <div class="container">
+          <p class="text">SIA ,, Kates plates,, ir noslēdzis 23.08.2021. līgumu Nr. SKV-L-2021/259 ar Latvijas Investīciju un attīstības aģentūru par atbalsta saņemšanu pasākuma ,, Starptautiskās konkurētspējas veicināšana,, ietvaros, ko līdzfinansē Eiropas Reģionālās attīstības fonds</p>
+          <img src="img/eu-note.png" class="eu-note-image" alt="EU note" />
+        </div>
+      </section>
+      <section class="main-footer">
+        <div class="container">
+          <div class="flexbox-full flexbox--grid">
+            <div class="col col-33 col-m-full flexbox-full flexbox-column">
+              <img src="img/logo-white.svg" class="logo-image" alt="" />
+              <div class="social-links-block flexbox-full v-c">
+                <a href="" class="social-links-link"><img src="img/icons/facebook.svg" alt="Facebook icon" /></a>
+                <a href="" class="social-links-link"><img src="img/icons/instagram.svg" alt="Instagram icon" /></a>
+                <a href="" class="social-links-link"><img src="img/icons/youtube.svg" alt="Youtube icon" /></a>
+                <a href="" class="social-links-link"><img src="img/icons/linkedin.svg" alt="Linkedin icon" /></a>
+              </div>
+            </div>
+            <div class="col col-33 col-m-full">
+              <div class="main-footer-block">
+                <h6 class="h6-heading">BIROJA/NOLIKTAVAS ADRESE</h6>
+                <p class="text">Uriekstes iela 2c, Rīga, LV-1005, Latvija</p>
+              </div>
+              <div class="main-footer-block">
+                <h6 class="h6-heading">Darba laiks</h6>
+                <p class="text">Pirmdiena – piektdiena 9:00 – 18:00</p>
+              </div>
+              <div class="main-footer-block">
+                <h6 class="h6-heading">E-pasts</h6>
+                <p class="text"><a href="mailto:plates@katesplates.lv">plates@katesplates.lv</a></p>
+              </div>
+              <a href="" class="arrow-link">Visi kontakti</a>
+            </div>
+            <div class="col col-33 col-m-full">
+              <h6 class="h6-heading">REKVIZĪTI</h6>
+              <p class="text">
+                Kates Plates, SIA
+                <br />
+                PVN maksātāja Nr: LV 40003355395 Banka: AS “SWEDBANK”, SWIFT kods: HABALV22
+                <br />
+                Bankas konts:
+                <br />
+                LV05HABA0001408051455
+                <br />
+                Juridiskā adrese: Uriekstes iela 2c, Rīga, LV-1005, Latvija
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="legal-footer">
+        <div class="container">
+          <div class="flexbox-full flexbox--grid h-sb">
+            <div class="col col-m-full flexbox-full v-c h-c-m">
+              <p class="text">© 2022 SIA Kates plates. Visas tiesības aizsargātas.</p>
+            </div>
+            <div class="col col-m-full flexbox-full v-c h-c">
+              <img src="img/caballero-logo.png" class="logo-image" alt="Caballero digital agency" />
+            </div>
+            <div class="col col-m-full flexbox-full v-c h-c-m">
+              <div class="legal-links-block flexbox-full">
+                <a href="" class="legal-links-link">Distances līgums</a>
+                <a href="" class="legal-links-link">Privātuma politika</a>
+                <a href="" class="legal-links-link">Sīkdatņu politika</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>

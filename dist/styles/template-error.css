@@ -1,0 +1,14 @@
+.error-section {
+  background-color: white;
+  padding: 105px 0;
+}
+.error-text {
+  margin: 60px auto;
+  max-width: 700px;
+}
+.error-text a {
+  color: #C00D0D;
+}
+.error-icon {
+  margin-bottom: 40px;
+}

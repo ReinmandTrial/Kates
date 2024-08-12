@@ -1,0 +1,36 @@
+.catalog-production-section {
+  padding: 40px 0;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+.catalog-production-pictures {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+@media (max-width: 1200px) {
+  .catalog-production-pictures {
+    position: relative;
+    height: 300px;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0 0 40px 0;
+  }
+  .catalog-production-pictures img {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+@media (max-width: 600px) {
+  .catalog-production-pictures {
+    margin: 0 0 40px -15px;
+  }
+}
+.catalog-production-text .h3-heading {
+  margin-bottom: 24px;
+}
+.catalog-production-text .arrow-link {
+  margin-top: 12px;
+}

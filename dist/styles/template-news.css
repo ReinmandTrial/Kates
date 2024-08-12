@@ -1,0 +1,221 @@
+.pagination {
+  margin: 24px 0 40px;
+  text-align: right;
+}
+@media (max-width: 900px) {
+  .pagination {
+    text-align: center;
+  }
+}
+.pagination-number {
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 8px;
+}
+.pagination-number.active {
+  background-color: #F5F6F6;
+}
+.pagination-arrow {
+  background-image: url(../img/icons/black-right-arrow.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 8px;
+  height: 14px;
+  display: inline-block;
+}
+
+.article-block {
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
+  max-width: 384px;
+  margin: 0 auto;
+}
+.article-block .text:last-of-type {
+  margin-bottom: 32px;
+}
+@media (max-width: 900px) {
+  .article-block .text:last-of-type {
+    margin-bottom: 16px;
+  }
+}
+.article-block:hover .article-block-top-image {
+  transform: scale(1.1) translate(-50%, -50%);
+}
+.article-block:hover .h5-heading {
+  color: #C00D0D;
+}
+.article-block-top {
+  position: relative;
+  height: 192px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: block;
+}
+.article-block-top-image {
+  position: absolute;
+  height: 100%;
+  transition: 0.3s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: top left;
+}
+@media (max-width: 1200px) {
+  .article-block-top-image {
+    width: auto;
+    max-width: unset;
+    height: 100%;
+  }
+}
+.article-block-date {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  background-color: white;
+  border-radius: 0px 0px 8px 8px;
+  padding: 14px 20px;
+}
+.article-block-day {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+}
+.article-block-text {
+  padding: 32px 24px 36px;
+}
+@media (max-width: 1200px) {
+  .article-block-text {
+    padding: 24px 16px;
+  }
+}
+.article-block .h5-heading {
+  color: #0A0A0A;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+@media (max-width: 1366px) {
+  .article-block {
+    max-width: 360px;
+  }
+}
+@media (max-width: 1200px) {
+  .article-block {
+    margin-bottom: 24px;
+  }
+}
+
+.news-section {
+  padding-bottom: 56px;
+  border-bottom: 2px solid #EBEDEE;
+}
+.news-top {
+  margin-bottom: 36px;
+  display: flex;
+}
+.news-top-filter {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  gap: 32px;
+  align-items: center;
+}
+.news-top-filter-tag {
+  text-decoration: none;
+  font-weight: 500;
+}
+.news-top-filter-tag.active {
+  color: #C00D0D;
+}
+.news-top-filter-shown {
+  margin-left: auto;
+  color: #9BA4A9;
+  font-weight: 400;
+}
+
+.pagination-number.active {
+  background-color: white;
+}
+
+.article-section {
+  background-color: white;
+  padding: 40px 0 24px;
+}
+.article-section .container {
+  max-width: 800px;
+  margin: auto;
+}
+.article-more-section {
+  padding: 40px 0;
+  border-bottom: 2px solid #EBEDEE;
+}
+.article-more-slider-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  position: static;
+  margin: -80px 0 24px;
+}
+.article-more-slider-button-next, .article-more-slider-button-prev {
+  background-color: #F5F6F6;
+  border-radius: 2px;
+  width: 56px;
+  height: 56px;
+  position: static;
+  z-index: 1;
+  margin: 0;
+}
+.article-more-slider-button-next:after, .article-more-slider-button-prev:after {
+  color: #0A0A0A;
+  font-size: 18px;
+}
+.article-more-button {
+  text-align: center;
+  margin: 30px 0 0;
+}
+.article-thumb {
+  position: relative;
+  margin-bottom: 40px;
+}
+.article-thumb .article-block-top {
+  height: 375px;
+}
+@media (max-width: 900px) {
+  .article-thumb .article-block-top {
+    height: 200px;
+  }
+}
+.article-thumb .article-block-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.article-thumb .article-block-date .article-block-month {
+  font-size: 14px;
+  margin: 0 0 4px;
+}
+.article-thumb .article-block-date .article-block-year {
+  font-size: 12px;
+  color: #9BA4A9;
+}
+.article-social-links {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.article-social-links-heading {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 24px 0 16px;
+}
+.article-social-links-item {
+  margin: 0 8px;
+  padding: 16px;
+  display: inline-block;
+  background-color: #F5F6F6;
+  border-radius: 8px;
+  width: 56px;
+  height: 56px;
+}
